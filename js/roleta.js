@@ -29,6 +29,7 @@ async function testarFirebase() {
 }
 
 testarFirebase();
+carregarPremiosFirebase();
 
 async function carregarPremiosFirebase() {
 
