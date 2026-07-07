@@ -8,7 +8,7 @@ import {
 const canvas = document.getElementById("roleta");
 const ctx = canvas.getContext("2d");
 
-[
+const premios = [
   "Brinde",
   "R$ 5",
   "Brinde",
