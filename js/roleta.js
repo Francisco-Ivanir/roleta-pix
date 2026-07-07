@@ -45,7 +45,9 @@ async function carregarPremiosFirebase() {
       const dados = doc.data();
 
       if (dados.ativo === true) {
-        premiosFirebase.push(dados.nome);
+       console.log("Documento:", doc.id, dados);
+
+premiosFirebase.push(dados.nome);
       }
 
     });
