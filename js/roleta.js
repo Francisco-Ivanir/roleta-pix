@@ -30,6 +30,35 @@ async function testarFirebase() {
 
 testarFirebase();
 
+async function carregarPremiosFirebase() {
+
+  try {
+
+    const snapshot =
+      await getDocs(collection(db, "premios"));
+
+    const premiosFirebase = [];
+
+    snapshot.forEach(doc => {
+
+      const dados = doc.data();
+
+      if (dados.ativo === true) {
+        premiosFirebase.push(dados.nome);
+      }
+
+    });
+
+    console.log("Prêmios do Firebase:", premiosFirebase);
+
+  } catch (erro) {
+
+    console.error(erro);
+
+  }
+
+}
+
 const canvas = document.getElementById("roleta");
 const ctx = canvas.getContext("2d");
 
