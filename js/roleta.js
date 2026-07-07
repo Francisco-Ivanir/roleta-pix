@@ -119,4 +119,4 @@ document
 
 });
 
-carregarPremios();
+
