@@ -8,6 +8,16 @@ import {
 const canvas = document.getElementById("roleta");
 const ctx = canvas.getContext("2d");
 
+[
+  "Brinde",
+  "R$ 5",
+  "Brinde",
+  "R$ 10",
+  "Brinde",
+  "Especial",
+  "Tente",
+  "Brinde"
+];
 
 const cores = [
   "#ff1744",
