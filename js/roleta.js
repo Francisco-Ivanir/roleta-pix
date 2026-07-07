@@ -118,3 +118,28 @@ document
   },20);
 
 });
+
+async function carregarPremios() {
+
+  try {
+
+    const querySnapshot =
+      await getDocs(collection(db, "premios"));
+
+    console.log("=== PRÊMIOS CADASTRADOS ===");
+
+    querySnapshot.forEach((doc) => {
+
+      console.log(doc.id, doc.data());
+
+    });
+
+  } catch (erro) {
+
+    console.error("Erro ao carregar prêmios:", erro);
+
+  }
+
+}
+
+carregarPremios();
