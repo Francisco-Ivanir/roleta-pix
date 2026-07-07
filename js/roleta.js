@@ -119,6 +119,8 @@ document
 
 });
 
+let premios = [];
+
 async function carregarPremios() {
 
   try {
@@ -126,17 +128,25 @@ async function carregarPremios() {
     const querySnapshot =
       await getDocs(collection(db, "premios"));
 
-    console.log("=== PRÊMIOS CADASTRADOS ===");
+    premios = [];
 
     querySnapshot.forEach((doc) => {
 
-      console.log(doc.id, doc.data());
+      const dados = doc.data();
+
+      if (dados.ativo === true) {
+
+        premios.push(dados.nome);
+
+      }
 
     });
 
+    console.log("Prêmios carregados:", premios);
+
   } catch (erro) {
 
-    console.error("Erro ao carregar prêmios:", erro);
+    console.error("Erro:", erro);
 
   }
 
