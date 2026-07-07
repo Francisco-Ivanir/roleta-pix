@@ -1,3 +1,10 @@
+import { db } from "../config/firebase-config.js";
+
+import {
+  collection,
+  getDocs
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
 const canvas = document.getElementById("roleta");
 const ctx = canvas.getContext("2d");
 
