@@ -52,6 +52,10 @@ async function carregarPremiosFirebase() {
 
     console.log("Prêmios do Firebase:", premiosFirebase);
 
+    premios = premiosFirebase;
+
+desenharRoleta();
+    
   } catch (erro) {
 
     console.error(erro);
@@ -63,7 +67,7 @@ async function carregarPremiosFirebase() {
 const canvas = document.getElementById("roleta");
 const ctx = canvas.getContext("2d");
 
-const premios = [
+let premios = [
   "Brinde",
   "R$ 5",
   "Brinde",
