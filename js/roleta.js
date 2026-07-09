@@ -144,12 +144,37 @@ desenharRoleta();
 
 document
 .getElementById("btnGirar")
+
+function sortearPorPeso() {
+
+  const totalPeso = premios.reduce((total, premio) => total + premio.peso, 0);
+
+  let sorteio = Math.random() * totalPeso;
+
+  for (const premio of premios) {
+
+    sorteio -= premio.peso;
+
+    if (sorteio <= 0) {
+      return premio;
+    }
+
+  }
+
+  return premios[0];
+
+}
+  
 .addEventListener("click", () => {
 
   if(girando) return;
 
   girando = true;
+  
+const premioSorteado = sortearPorPeso();
 
+console.log("Prêmio sorteado:", premioSorteado);
+  
   let velocidade = 0.35;
 
   const animacao = setInterval(() => {
