@@ -131,10 +131,10 @@ function desenharRoleta() {
     ctx.font = "bold 14px Arial";
 
     ctx.fillText(
-      premios[i],
-      70,
-      5
-    );
+    premios[i].nome,
+    70,
+    5
+);
 
     ctx.restore();
   }
@@ -176,7 +176,7 @@ document
       document
       .getElementById("resultado")
       .innerText =
-      "Resultado: " + premios[setor];
+     "Resultado: " + premios[setor].nome;
     }
 
   },20);
