@@ -5,30 +5,8 @@ import {
   getDocs
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
-async function testarFirebase() {
 
-  try {
 
-    const snapshot =
-      await getDocs(collection(db, "premios"));
-
-    console.log("=== FIREBASE OK ===");
-
-    snapshot.forEach(doc => {
-
-      console.log(doc.id, doc.data());
-
-    });
-
-  } catch (erro) {
-
-    console.error("Firebase:", erro);
-
-  }
-
-}
-
-testarFirebase();
 carregarPremiosFirebase();
 
 async function carregarPremiosFirebase() {
