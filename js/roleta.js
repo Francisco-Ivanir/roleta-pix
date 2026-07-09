@@ -72,16 +72,7 @@ desenharRoleta();
 const canvas = document.getElementById("roleta");
 const ctx = canvas.getContext("2d");
 
-let premios = [
-  "Brinde",
-  "R$ 5",
-  "Brinde",
-  "R$ 10",
-  "Brinde",
-  "Especial",
-  "Tente",
-  "Brinde"
-];
+let premios = [];
 
 const cores = [
   "#ff1744",
