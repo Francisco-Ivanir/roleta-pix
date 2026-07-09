@@ -142,9 +142,6 @@ function desenharRoleta() {
 
 desenharRoleta();
 
-document
-.getElementById("btnGirar")
-
 function sortearPorPeso() {
 
   const totalPeso = premios.reduce((total, premio) => total + premio.peso, 0);
@@ -164,7 +161,9 @@ function sortearPorPeso() {
   return premios[0];
 
 }
-  
+
+document
+.getElementById("btnGirar")
 .addEventListener("click", () => {
 
   if(girando) return;
