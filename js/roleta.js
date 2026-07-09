@@ -55,7 +55,7 @@ premiosFirebase.push({
 
     });
 
-    console.log("Prêmios do Firebase:", premiosFirebase);
+    console.log("Prêmios com peso:", premiosFirebase);
 
     premios = premiosFirebase;
 
