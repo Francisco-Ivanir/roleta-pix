@@ -157,7 +157,8 @@ document
 
   const indicePremio =
   encontrarIndicePremio(premioSorteado);
-
+const meioSetor =
+anguloPorSetor / 2;
 
   console.log(
     "Índice do prêmio:",
@@ -171,11 +172,12 @@ document
   (2 * Math.PI) / premios.length;
 
 
- let destino =
-  (voltas * 2 * Math.PI)
-  + (indicePremio * anguloPorSetor)
-  - (Math.PI / 2)
-  + (anguloPorSetor / 2);
+let destino =
+(voltas * 2 * Math.PI)
+- (
+  indicePremio * anguloPorSetor
+)
+- meioSetor;
 
 
   let inicio = anguloAtual;
