@@ -131,6 +131,14 @@ function sortearPorPeso() {
 
 }
 
+function encontrarIndicePremio(premio) {
+
+  return premios.findIndex(
+    item => item.nome === premio.nome
+  );
+
+}
+
 document
 .getElementById("btnGirar")
 .addEventListener("click", () => {
