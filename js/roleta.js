@@ -171,11 +171,11 @@ document
   (2 * Math.PI) / premios.length;
 
 
-  let destino =
+ let destino =
   (voltas * 2 * Math.PI)
-  - (indicePremio * anguloPorSetor)
-  + (Math.PI / 2)
-  - (anguloPorSetor / 2);
+  + (indicePremio * anguloPorSetor)
+  - (Math.PI / 2)
+  + (anguloPorSetor / 2);
 
 
   let inicio = anguloAtual;
