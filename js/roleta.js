@@ -146,42 +146,95 @@ document
   if(girando) return;
 
   girando = true;
-  
-const premioSorteado = sortearPorPeso();
 
-console.log("Prêmio sorteado:", premioSorteado);
-  
-  let velocidade = 0.35;
+  const premioSorteado = sortearPorPeso();
+
+  console.log(
+    "Prêmio sorteado:",
+    premioSorteado
+  );
+
+
+  const indicePremio =
+  encontrarIndicePremio(premioSorteado);
+
+
+  console.log(
+    "Índice do prêmio:",
+    indicePremio
+  );
+
+
+  let voltas = 5;
+
+  let anguloPorSetor =
+  (2 * Math.PI) / premios.length;
+
+
+  let destino =
+  (voltas * 2 * Math.PI) +
+  (indicePremio * anguloPorSetor);
+
+
+  let inicio = anguloAtual;
+
+
+  let tempo = 0;
+
+  let duracao = 3000;
+
 
   const animacao = setInterval(() => {
 
-    anguloAtual += velocidade;
 
-    velocidade *= 0.985;
+    tempo += 20;
 
-    desenharRoleta();
 
-    if(velocidade < 0.002){
+    let progresso =
+    tempo / duracao;
+
+
+    if(progresso >= 1){
+
+      progresso = 1;
 
       clearInterval(animacao);
 
       girando = false;
 
-      const setor =
-      Math.floor(
-        ((2*Math.PI - (anguloAtual % (2*Math.PI)))
-        / (2*Math.PI))
-        * premios.length
-      ) % premios.length;
+      anguloAtual = destino;
+
+      desenharRoleta();
+
 
       document
       .getElementById("resultado")
       .innerText =
-     "Resultado: " + premios[setor].nome;
+      "Resultado: " + premioSorteado.nome;
+
+
+      return;
+
     }
+
+
+    // acelera e desacelera suavemente
+
+    let suavizado =
+    1 - Math.pow(1 - progresso, 3);
+
+
+    anguloAtual =
+    inicio +
+    (destino - inicio) *
+    suavizado;
+
+
+    desenharRoleta();
+
 
   },20);
 
-});
 
+});
 
