@@ -304,9 +304,25 @@ document
 
 function abrirModalPix(){
 
-  document
-  .getElementById("modalPix")
-  .style.display = "flex";
+
+document
+.getElementById("modalPix")
+.style.display = "flex";
+
+
+document
+.getElementById("chavePix")
+.innerText =
+pixConfig.chave;
+
+
+document
+.getElementById("valorPix")
+.innerText =
+"R$ " +
+pixConfig.valor.toFixed(2)
+.replace(".",",");
+
 
 }
 
@@ -337,5 +353,19 @@ document
 
 alert("Pagamento confirmado! Giro liberado.");
 
+
+});
+
+document
+.getElementById("btnCopiarPix")
+.addEventListener("click",()=>{
+
+
+navigator.clipboard.writeText(
+pixConfig.chave
+);
+
+
+alert("Chave PIX copiada!");
 
 });
