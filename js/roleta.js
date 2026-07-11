@@ -204,49 +204,20 @@ function girarAtePremio(indicePremio) {
 
 }
 
-document
-.getElementById("btnGirar")
-.addEventListener("click", () => {
-
-  if(girando) return;
-
-  girando = true;
-
-  const premioSorteado = sortearPorPeso();
-
-  console.log(
-    "Prêmio sorteado:",
-    premioSorteado
-  );
+function girarAtePremio(indicePremio, premioSorteado) {
 
 
-  const indicePremio =
-encontrarIndicePremio(premioSorteado);
+  let voltas = 5;
 
 
-let voltas = 5;
+  let anguloPorSetor =
+  (2 * Math.PI) / premios.length;
 
 
-let anguloPorSetor =
-(2 * Math.PI) / premios.length;
-
-
-const meioSetor =
-anguloPorSetor / 2;
-
-
-console.log(
-  "Índice do prêmio:",
-  indicePremio
-);
-
-
-let destino =
-(voltas * 2 * Math.PI)
-- (
-  indicePremio * anguloPorSetor
-)
-- meioSetor;
+  let destino =
+  (voltas * 2 * Math.PI)
+  - (indicePremio * anguloPorSetor)
+  - (anguloPorSetor / 2);
 
 
   let inicio = anguloAtual;
@@ -273,9 +244,12 @@ let destino =
 
       clearInterval(animacao);
 
+
       girando = false;
 
+
       anguloAtual = destino;
+
 
       desenharRoleta();
 
@@ -291,16 +265,14 @@ let destino =
     }
 
 
-    // acelera e desacelera suavemente
-
     let suavizado =
     1 - Math.pow(1 - progresso, 3);
 
 
     anguloAtual =
     inicio +
-    (destino - inicio) *
-    suavizado;
+    (destino - inicio)
+    * suavizado;
 
 
     desenharRoleta();
@@ -308,6 +280,43 @@ let destino =
 
   },20);
 
+}
+
+document
+.getElementById("btnGirar")
+.addEventListener("click", () => {
+
+
+  if(girando) return;
+
+
+  girando = true;
+
+
+  const premioSorteado =
+  sortearPorPeso();
+
+
+  console.log(
+    "Prêmio sorteado:",
+    premioSorteado
+  );
+
+
+  const indicePremio =
+  encontrarIndicePremio(premioSorteado);
+
+
+  console.log(
+    "Índice do prêmio:",
+    indicePremio
+  );
+
+
+  girarAtePremio(
+    indicePremio,
+    premioSorteado
+  );
+
 
 });
-
