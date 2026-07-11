@@ -68,6 +68,8 @@ let girando = false;
 
 let giroLiberado = false;
 
+const chavePix = "CHAVE_TESTE_AQUI";
+
 function desenharRoleta() {
 
   const total = premios.length;
