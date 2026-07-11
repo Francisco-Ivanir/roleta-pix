@@ -66,6 +66,8 @@ const cores = [
 let anguloAtual = 0;
 let girando = false;
 
+let giroLiberado = false;
+
 function desenharRoleta() {
 
   const total = premios.length;
@@ -237,7 +239,15 @@ document
 .addEventListener("click", () => {
 
 
-  if(girando) return;
+ if (girando) return;
+
+if (!giroLiberado) {
+
+  alert("Faça o pagamento PIX para liberar um giro.");
+
+  return;
+
+}
 
 
   girando = true;
