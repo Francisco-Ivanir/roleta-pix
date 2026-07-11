@@ -61,6 +61,62 @@ h1{
     cursor:pointer;
 }
 
+.modalPix {
+
+  display:none;
+
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100%;
+
+  background:rgba(0,0,0,0.7);
+
+  justify-content:center;
+  align-items:center;
+
+}
+
+
+.caixaPix {
+
+  background:white;
+
+  width:280px;
+
+  padding:20px;
+
+  border-radius:15px;
+
+  text-align:center;
+
+}
+
+
+.caixaPix h2 {
+
+  margin-top:0;
+
+}
+
+
+.caixaPix button {
+
+  margin:8px;
+
+  padding:10px 15px;
+
+  border:none;
+
+  border-radius:8px;
+
+  cursor:pointer;
+
+}
+
 #resultado{
     margin-top:20px;
     font-size:20px;
