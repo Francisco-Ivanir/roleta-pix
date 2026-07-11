@@ -245,7 +245,7 @@ document
 
 if (!giroLiberado) {
 
-  alert("Faça o pagamento PIX para liberar um giro.");
+  abrirModalPix();
 
   return;
 
