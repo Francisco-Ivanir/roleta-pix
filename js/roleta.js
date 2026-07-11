@@ -68,7 +68,15 @@ let girando = false;
 
 let giroLiberado = false;
 
-const chavePix = "CHAVE_TESTE_AQUI";
+const pixConfig = {
+
+  chave:
+  "CHAVE_TESTE_AQUI",
+
+  valor:
+  1.00
+
+};
 
 function desenharRoleta() {
 
