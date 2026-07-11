@@ -280,3 +280,13 @@ if (!giroLiberado) {
 
 
 });
+
+document
+.getElementById("btnLiberar")
+.addEventListener("click", () => {
+
+  giroLiberado = true;
+
+  alert("1 giro liberado!");
+
+});
