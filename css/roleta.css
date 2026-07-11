@@ -122,3 +122,39 @@ h1{
     font-size:20px;
     font-weight:bold;
 }
+
+.areaChave {
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:10px;
+
+}
+
+
+.areaChave span {
+
+background:#eee;
+
+padding:8px;
+
+border-radius:8px;
+
+font-size:13px;
+
+word-break:break-all;
+
+}
+
+
+.avisoPix {
+
+font-size:14px;
+
+color:#555;
+
+}
