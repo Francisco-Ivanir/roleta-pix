@@ -149,10 +149,18 @@ function girarAtePremio(indicePremio, premioSorteado) {
   (2 * Math.PI) / premios.length;
 
 
+  // centro do prêmio escolhido
+  let anguloPremio =
+  (indicePremio * anguloPorSetor)
+  + (anguloPorSetor / 2);
+
+
+  // ajusta para o ponteiro (topo)
   let destino =
   (voltas * 2 * Math.PI)
-  - (indicePremio * anguloPorSetor)
-  - (anguloPorSetor / 2);
+  - anguloPremio
+  + (Math.PI / 2);
+
 
 
   let inicio = anguloAtual;
@@ -161,6 +169,7 @@ function girarAtePremio(indicePremio, premioSorteado) {
   let tempo = 0;
 
   let duracao = 3000;
+
 
 
   const animacao = setInterval(() => {
@@ -173,9 +182,9 @@ function girarAtePremio(indicePremio, premioSorteado) {
     tempo / duracao;
 
 
+
     if(progresso >= 1){
 
-      progresso = 1;
 
       clearInterval(animacao);
 
@@ -189,6 +198,7 @@ function girarAtePremio(indicePremio, premioSorteado) {
       desenharRoleta();
 
 
+
       document
       .getElementById("resultado")
       .innerText =
@@ -200,8 +210,10 @@ function girarAtePremio(indicePremio, premioSorteado) {
     }
 
 
+
     let suavizado =
     1 - Math.pow(1 - progresso, 3);
+
 
 
     anguloAtual =
@@ -210,10 +222,13 @@ function girarAtePremio(indicePremio, premioSorteado) {
     * suavizado;
 
 
+
     desenharRoleta();
 
 
+
   },20);
+
 
 }
 
