@@ -251,7 +251,8 @@ if (!giroLiberado) {
 
 
   girando = true;
-
+  
+giroLiberado = false;
 
   const premioSorteado =
   sortearPorPeso();
