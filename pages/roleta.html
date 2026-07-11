@@ -45,24 +45,47 @@ Liberar Giro (Teste)
 
 <script type="module" src="../js/roleta.js"></script>
 
-  <div id="modalPix" class="modalPix">
+ <div id="modalPix" class="modalPix">
 
   <div class="caixaPix">
 
-    <h2>Pagamento PIX</h2>
+    <h2>🎯 Liberar Giro</h2>
 
-    <p>Valor do giro:</p>
+    <p>Faça o pagamento PIX para liberar 1 giro.</p>
 
-    <h3>R$ 1,00</h3>
+
+    <h3 id="valorPix">
+      R$ 1,00
+    </h3>
+
+
+    <img 
+    id="qrPix"
+    src="../img/qr-teste.png"
+    width="180"
+    >
+
 
     <p>Chave PIX:</p>
 
-    <strong id="chavePix">
-      CHAVE_TESTE_AQUI
-    </strong>
+
+    <div class="areaChave">
+
+      <span id="chavePix">
+        CHAVE_TESTE_AQUI
+      </span>
+
+      <button id="btnCopiarPix">
+        Copiar
+      </button>
+
+    </div>
 
 
-    <br><br>
+    <p class="avisoPix">
+      Após pagar, clique em "Já paguei".
+    </p>
+
 
     <button id="btnJaPaguei">
       Já paguei
