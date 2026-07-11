@@ -157,9 +157,9 @@ function girarAtePremio(indicePremio, premioSorteado) {
 
   // ajusta para o ponteiro (topo)
   let destino =
-  (voltas * 2 * Math.PI)
-  - anguloPremio
-  + (Math.PI / 2);
+(voltas * 2 * Math.PI)
+- anguloPremio
+- (Math.PI / 2);
 
 
 
