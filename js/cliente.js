@@ -4,3 +4,11 @@ let clienteAtual = {
   whatsapp:""
 
 };
+
+function abrirModalCliente(){
+
+  document
+  .getElementById("modalCliente")
+  .style.display = "flex";
+
+}
