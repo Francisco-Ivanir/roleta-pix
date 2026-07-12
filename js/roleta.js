@@ -568,10 +568,3 @@ document
 
 });
 
-function abrirModalCliente(){
-
-  document
-  .getElementById("modalCliente")
-  .style.display = "flex";
-
-}
