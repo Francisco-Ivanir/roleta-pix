@@ -2,9 +2,12 @@ import { db } from "../config/firebase-config.js";
 
 import {
   collection,
-  getDocs
+  getDocs,
+  addDoc,
+  updateDoc,
+  doc,
+  serverTimestamp
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
-
 
 
 carregarPremiosFirebase();
@@ -67,6 +70,7 @@ let anguloAtual = 0;
 let girando = false;
 
 let giroLiberado = false;
+let pagamentoAtual = null;
 
 const pixConfig = {
 
