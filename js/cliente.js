@@ -5,13 +5,6 @@ let clienteAtual = {
 
 };
 
-function abrirModalCliente(){
-
-  document
-  .getElementById("modalCliente")
-  .style.display = "flex";
-
-}
 
 document
 .getElementById("btnContinuarCliente")
