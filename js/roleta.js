@@ -72,13 +72,6 @@ let girando = false;
 let giroLiberado = false;
 let pagamentoAtual = null;
 
-let clienteAtual = {
-
-  nome:"",
-  whatsapp:""
-
-};
-
 const pixConfig = {
 
   chave:
