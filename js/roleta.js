@@ -220,6 +220,7 @@ function girarAtePremio(indicePremio, premioSorteado) {
       .innerText =
       "Resultado: " + premioSorteado.nome;
 
+      finalizarPagamento(premioSorteado);
 
       return;
 
@@ -446,3 +447,66 @@ pixConfig.chave
 alert("Chave PIX copiada!");
 
 });
+
+async function finalizarPagamento(premioSorteado){
+
+
+if(!pagamentoAtual){
+
+console.log("Nenhum pagamento encontrado.");
+
+return;
+
+}
+
+
+try{
+
+
+await updateDoc(
+
+doc(
+db,
+"pagamentos",
+pagamentoAtual
+),
+
+{
+
+status:"finalizado",
+
+premio:
+premioSorteado.nome,
+
+peso:
+premioSorteado.peso,
+
+finalizadoEm:
+serverTimestamp()
+
+}
+
+);
+
+
+console.log(
+"Pagamento finalizado:",
+pagamentoAtual
+);
+
+
+}
+
+
+catch(erro){
+
+console.error(
+"Erro ao finalizar:",
+erro
+);
+
+
+}
+
+
+}
