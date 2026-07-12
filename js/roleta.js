@@ -512,15 +512,6 @@ console.error(
 erro
 );
 
-  function abrirModalCliente(){
-
-document
-.getElementById("modalCliente")
-.style.display="flex";
-
-}
-  
-
 
 }
 
