@@ -306,7 +306,7 @@ document
 
 });
 
-function abrirModalPix(){
+async function abrirModalPix(){
 
 
 document
@@ -328,6 +328,47 @@ pixConfig.valor.toFixed(2)
 .replace(".",",");
 
 
+
+try {
+
+
+const pagamento =
+await addDoc(
+collection(db,"pagamentos"),
+{
+
+valor: pixConfig.valor,
+
+status:"pendente",
+
+criadoEm:
+serverTimestamp()
+
+});
+
+
+pagamentoAtual = pagamento.id;
+
+
+console.log(
+"Pagamento criado:",
+pagamento.id
+);
+
+
+
+}
+catch(erro){
+
+console.error(
+"Erro pagamento:",
+erro
+);
+
+
+}
+
+
 }
 
 document
@@ -344,7 +385,39 @@ document
 
 document
 .getElementById("btnJaPaguei")
-.addEventListener("click",()=>{
+.addEventListener("click",async ()=>{
+
+
+if(pagamentoAtual){
+
+
+await updateDoc(
+
+doc(
+db,
+"pagamentos",
+pagamentoAtual
+),
+
+{
+
+status:"confirmado",
+
+confirmadoEm:
+serverTimestamp()
+
+}
+
+);
+
+
+console.log(
+"Pagamento confirmado:",
+pagamentoAtual
+);
+
+
+}
 
 
 giroLiberado = true;
