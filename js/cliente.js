@@ -5,7 +5,7 @@ let clienteAtual = {
 
 };
 
-function abrirModalCliente(){
+export function abrirModalCliente(){
 
   document
   .getElementById("modalCliente")
