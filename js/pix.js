@@ -8,6 +8,9 @@ import {
   serverTimestamp
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
+import {
+  giroLiberado
+} from "./roleta.js";
 
 let pagamentoAtual = null;
 
