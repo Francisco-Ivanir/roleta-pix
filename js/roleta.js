@@ -330,6 +330,9 @@ document
 async function finalizarPagamento(premioSorteado){
 
 
+const pagamentoAtual = pegarPagamentoAtual();
+
+
 if(!pagamentoAtual){
 
 console.log("Nenhum pagamento encontrado.");
