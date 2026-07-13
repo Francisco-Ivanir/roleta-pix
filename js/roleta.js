@@ -17,6 +17,10 @@ import {
  abrirModalPix
 } from "./pix.js";
 
+import {
+  pegarPagamentoAtual
+} from "./pix.js";
+
 carregarPremiosFirebase();
 
 async function carregarPremiosFirebase() {
