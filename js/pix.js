@@ -14,6 +14,11 @@ import {
 
 let pagamentoAtual = null;
 
+export function pegarPagamentoAtual(){
+
+  return pagamentoAtual;
+
+}
 
 const pixConfig = {
 
