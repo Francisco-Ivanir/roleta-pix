@@ -76,7 +76,7 @@ const cores = [
 let anguloAtual = 0;
 let girando = false;
 
-let giroLiberado = false;
+export let giroLiberado = false;
 let pagamentoAtual = null;
 
 const pixConfig = {
