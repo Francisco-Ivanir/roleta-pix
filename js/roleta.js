@@ -13,6 +13,10 @@ import {
   abrirModalCliente
 } from "./cliente.js";
 
+import {
+ abrirModalPix
+} from "./pix.js";
+
 carregarPremiosFirebase();
 
 async function carregarPremiosFirebase() {
