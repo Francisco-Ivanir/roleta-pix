@@ -1,3 +1,7 @@
+import {
+  abrirModalPix
+} from "./roleta.js";
+
 let clienteAtual = {
 
   nome:"",
