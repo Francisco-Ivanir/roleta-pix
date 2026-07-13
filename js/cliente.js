@@ -1,6 +1,6 @@
 import {
   abrirModalPix
-} from "./roleta.js";
+} from "./pix.js";
 
 let clienteAtual = {
 
