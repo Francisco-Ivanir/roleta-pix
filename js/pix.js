@@ -139,7 +139,7 @@ pagamentoAtual
 }
 
 
-giroLiberado = true;
+liberarGiro();
 
 
 document
