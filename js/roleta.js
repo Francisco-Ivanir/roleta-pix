@@ -81,7 +81,7 @@ let giroLiberado = false;
 
 export function liberarGiro(){
 
-  liberarGiro();
+  giroLiberado = true;
 
 }
 
