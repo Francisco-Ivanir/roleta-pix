@@ -9,10 +9,6 @@ import {
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
 import {
-  giroLiberado
-} from "./roleta.js";
-
-import {
   liberarGiro
 } from "./roleta.js";
 
