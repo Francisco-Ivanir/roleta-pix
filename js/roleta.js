@@ -310,7 +310,7 @@ document
 
 });
 
-async function abrirModalPix(){
+export async function abrirModalPix(){
 
 
 document
