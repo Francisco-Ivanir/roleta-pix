@@ -12,6 +12,10 @@ import {
   giroLiberado
 } from "./roleta.js";
 
+import {
+  liberarGiro
+} from "./roleta.js";
+
 let pagamentoAtual = null;
 
 
