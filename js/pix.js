@@ -68,6 +68,10 @@ collection(db,"pagamentos"),
 
 valor: pixConfig.valor,
 
+nomeCliente: cliente.nome,
+
+whatsappCliente: cliente.whatsapp,
+
 status:"pendente",
 
 criadoEm:
