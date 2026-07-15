@@ -80,8 +80,3 @@ document
 
 });
 
-export function pegarClienteAtual(){
-
-  return clienteAtual;
-
-}
