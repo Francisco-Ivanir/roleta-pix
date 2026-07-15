@@ -17,6 +17,12 @@ export function abrirModalCliente(){
 
 }
 
+export function pegarClienteAtual(){
+
+  return clienteAtual;
+
+}
+
 document
 .getElementById("btnContinuarCliente")
 .addEventListener("click",()=>{
