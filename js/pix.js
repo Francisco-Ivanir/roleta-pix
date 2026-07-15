@@ -41,7 +41,8 @@ document
 .getElementById("modalPix")
 .style.display = "flex";
 
-
+const cliente = pegarClienteAtual();
+  
 document
 .getElementById("chavePix")
 .innerText =
