@@ -89,7 +89,6 @@ export function liberarGiro(){
 
 }
 
-let pagamentoAtual = null;
 
 function desenharRoleta() {
 
