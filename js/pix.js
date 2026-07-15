@@ -42,6 +42,9 @@ document
 .style.display = "flex";
 
 const cliente = pegarClienteAtual();
+
+  cliente.nome
+cliente.whatsapp
   
 document
 .getElementById("chavePix")
