@@ -16,7 +16,7 @@ try{
 
 
 const snapshot =
-await getDocs(
+await onSnapshot(
 collection(db,"pagamentos")
 );
 
