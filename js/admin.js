@@ -7,18 +7,13 @@ import {
 
 carregarPainel();
 
+ function carregarPainel(){
 
-async function carregarPainel(){
+onSnapshot(
 
+collection(db,"pagamentos"),
 
-try{
-
-
-const snapshot =
-await getDocs(
-collection(db,"pagamentos")
-);
-
+(snapshot)=>{
 
 
 let total = 0;
@@ -30,13 +25,11 @@ let finalizados = 0;
 let arrecadado = 0;
 
 
-
 const lista =
 document.getElementById("listaPagamentos");
 
 
 lista.innerHTML = "";
-
 
 
 snapshot.forEach((doc)=>{
@@ -45,9 +38,7 @@ snapshot.forEach((doc)=>{
 const pagamento = doc.data();
 
 
-
 total++;
-
 
 
 if(pagamento.status === "pendente"){
@@ -55,7 +46,6 @@ if(pagamento.status === "pendente"){
 pendentes++;
 
 }
-
 
 
 if(pagamento.status === "finalizado"){
@@ -67,39 +57,27 @@ arrecadado += pagamento.valor;
 }
 
 
-
-
-const linha = document.createElement("tr");
+const linha =
+document.createElement("tr");
 
 
 linha.innerHTML = `
 
-<td>
-${pagamento.nomeCliente || "-"}
-</td>
+<td>${pagamento.nomeCliente || "-"}</td>
 
-<td>
-${pagamento.whatsappCliente || "-"}
-</td>
+<td>${pagamento.whatsappCliente || "-"}</td>
 
-<td>
-${pagamento.premio || "-"}
-</td>
+<td>${pagamento.premio || "-"}</td>
 
-<td>
-${pagamento.status}
-</td>
+<td>${pagamento.status}</td>
 
 `;
-
 
 
 lista.appendChild(linha);
 
 
-
 });
-
 
 
 document
@@ -107,17 +85,14 @@ document
 .innerText = total;
 
 
-
 document
 .getElementById("pendentes")
 .innerText = pendentes;
 
 
-
 document
 .getElementById("finalizados")
 .innerText = finalizados;
-
 
 
 document
@@ -129,10 +104,9 @@ arrecadado
 .replace(".",",");
 
 
+},
 
-}
-
-catch(erro){
+(erro)=>{
 
 console.error(
 "Erro ao carregar painel:",
@@ -141,5 +115,6 @@ erro
 
 }
 
+);
 
 }
