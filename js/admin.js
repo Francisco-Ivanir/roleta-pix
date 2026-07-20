@@ -73,6 +73,8 @@ if (pagamento.finalizadoEm) {
 
 linha.innerHTML = `
 
+<td>${dataHora}</td>
+
 <td>${pagamento.nomeCliente || "-"}</td>
 
 <td>${pagamento.whatsappCliente || "-"}</td>
