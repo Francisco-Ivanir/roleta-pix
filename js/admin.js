@@ -60,6 +60,16 @@ arrecadado += pagamento.valor;
 const linha =
 document.createElement("tr");
 
+  let dataHora = "-";
+
+if (pagamento.finalizadoEm) {
+
+  dataHora =
+  pagamento.finalizadoEm
+  .toDate()
+  .toLocaleString("pt-BR");
+
+}
 
 linha.innerHTML = `
 
