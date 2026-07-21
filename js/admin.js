@@ -129,7 +129,22 @@ arrecadado
 .toFixed(2)
 .replace(".",",");
 
+const divEstatisticas =
+document.getElementById("estatisticasPremios");
 
+divEstatisticas.innerHTML = "";
+
+for(const premio in estatisticas){
+
+const linha =
+document.createElement("p");
+
+linha.innerHTML =
+`🏆 ${premio}: <strong>${estatisticas[premio]}</strong>`;
+
+divEstatisticas.appendChild(linha);
+
+}
 },
 
 (erro)=>{
