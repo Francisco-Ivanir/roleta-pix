@@ -159,3 +159,43 @@ erro
 );
 
 }
+
+function carregarPremios(){
+
+onSnapshot(
+
+collection(db,"premios"),
+
+(snapshot)=>{
+
+const lista =
+document.getElementById("listaPremios");
+
+lista.innerHTML = "";
+
+snapshot.forEach((doc)=>{
+
+const premio = doc.data();
+
+const linha =
+document.createElement("tr");
+
+linha.innerHTML = `
+
+<td>${premio.nome}</td>
+
+<td>${premio.peso}</td>
+
+<td>${premio.ativo ? "✅" : "❌"}</td>
+
+`;
+
+lista.appendChild(linha);
+
+});
+
+}
+
+);
+
+}
