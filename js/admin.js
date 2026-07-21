@@ -13,7 +13,13 @@ carregarPainel();
 
 onSnapshot(
 
+query(
+
 collection(db,"pagamentos"),
+
+orderBy("finalizadoEm","desc")
+
+),
 
 (snapshot)=>{
 
