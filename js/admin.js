@@ -31,7 +31,8 @@ let pendentes = 0;
 let finalizados = 0;
 
 let arrecadado = 0;
-
+  
+const estatisticas = {};
 
 const lista =
 document.getElementById("listaPagamentos");
