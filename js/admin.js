@@ -9,6 +9,8 @@ import {
 
 carregarPainel();
 
+carregarPremios();
+
  function carregarPainel(){
 
 onSnapshot(
