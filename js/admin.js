@@ -63,6 +63,11 @@ finalizados++;
 
 arrecadado += pagamento.valor;
 
+const premio = pagamento.premio || "Sem prêmio";
+
+estatisticas[premio] =
+(estatisticas[premio] || 0) + 1;
+
 }
 
 
