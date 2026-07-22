@@ -190,6 +190,16 @@ linha.innerHTML = `
 
 <td>${premio.ativo ? "✅" : "❌"}</td>
 
+<td>
+
+<button class="btnEditar">
+
+✏️
+
+</button>
+
+</td>
+
 `;
 
 lista.appendChild(linha);
