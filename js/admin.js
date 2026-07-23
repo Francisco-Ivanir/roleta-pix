@@ -311,12 +311,6 @@ document
 
 .addEventListener("click", async()=>{
 
-if(!premioEditando){
-
-return;
-
-}
-
 try{
 
 if(premioEditando){
