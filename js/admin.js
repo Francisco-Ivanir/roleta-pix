@@ -238,6 +238,24 @@ e.target.classList.contains("btnEditar")
 
 ){
 
+premioEditando =
+e.target.dataset.id;
+
+document
+.getElementById("editNomePremio")
+.value =
+e.target.dataset.nome;
+
+document
+.getElementById("editPesoPremio")
+.value =
+e.target.dataset.peso;
+
+document
+.getElementById("editAtivoPremio")
+.checked =
+e.target.dataset.ativo === "true";
+
 document
 .getElementById("modalPremio")
 .style.display="flex";
