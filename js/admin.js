@@ -181,6 +181,8 @@ snapshot.forEach((doc)=>{
 
 const premio = doc.data();
 
+  const id = doc.id;
+  
 const linha =
 document.createElement("tr");
 
