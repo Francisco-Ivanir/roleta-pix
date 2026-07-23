@@ -1,4 +1,4 @@
-import { db } from "../config/firebase-config.js";
+v66import { db } from "../config/firebase-config.js";
 
 import {
   collection,
@@ -278,3 +278,70 @@ document
 
 });
 
+document
+
+.getElementById("btnSalvarPremio")
+
+.addEventListener("click", async()=>{
+
+if(!premioEditando){
+
+return;
+
+}
+
+try{
+
+await updateDoc(
+
+doc(
+db,
+"premios",
+premioEditando
+),
+
+{
+
+nome:
+
+document
+.getElementById("editNomePremio")
+.value,
+
+peso:
+
+Number(
+
+document
+.getElementById("editPesoPremio")
+.value
+
+),
+
+ativo:
+
+document
+.getElementById("editAtivoPremio")
+.checked
+
+}
+
+);
+
+document
+.getElementById("modalPremio")
+.style.display="none";
+
+alert("Prêmio atualizado!");
+
+}
+
+catch(erro){
+
+console.error(erro);
+
+alert("Erro ao atualizar prêmio.");
+
+}
+
+});
