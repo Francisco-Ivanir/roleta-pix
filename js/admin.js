@@ -319,6 +319,8 @@ return;
 
 try{
 
+if(premioEditando){
+
 await updateDoc(
 
 doc(
@@ -330,31 +332,46 @@ premioEditando
 {
 
 nome:
-
-document
-.getElementById("editNomePremio")
-.value,
+document.getElementById("editNomePremio").value,
 
 peso:
-
 Number(
-
-document
-.getElementById("editPesoPremio")
-.value
-
+document.getElementById("editPesoPremio").value
 ),
 
 ativo:
-
-document
-.getElementById("editAtivoPremio")
-.checked
+document.getElementById("editAtivoPremio").checked
 
 }
 
 );
 
+}
+else{
+
+await addDoc(
+
+collection(db,"premios"),
+
+{
+
+nome:
+document.getElementById("editNomePremio").value,
+
+peso:
+Number(
+document.getElementById("editPesoPremio").value
+),
+
+ativo:
+document.getElementById("editAtivoPremio").checked
+
+}
+
+);
+
+}
+  
 document
 .getElementById("modalPremio")
 .style.display="none";
