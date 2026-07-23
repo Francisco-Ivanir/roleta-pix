@@ -4,7 +4,9 @@ import {
   collection,
   query,
   orderBy,
-  onSnapshot
+  onSnapshot,
+  updateDoc,
+  doc
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
 carregarPainel();
