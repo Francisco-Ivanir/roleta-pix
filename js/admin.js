@@ -280,6 +280,32 @@ document
 
 document
 
+.getElementById("btnNovoPremio")
+
+.addEventListener("click",()=>{
+
+premioEditando = null;
+
+document
+.getElementById("editNomePremio")
+.value = "";
+
+document
+.getElementById("editPesoPremio")
+.value = "";
+
+document
+.getElementById("editAtivoPremio")
+.checked = true;
+
+document
+.getElementById("modalPremio")
+.style.display = "flex";
+
+});
+
+document
+
 .getElementById("btnSalvarPremio")
 
 .addEventListener("click", async()=>{
