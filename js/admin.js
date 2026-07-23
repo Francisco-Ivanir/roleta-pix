@@ -11,6 +11,8 @@ carregarPainel();
 
 carregarPremios();
 
+let premioEditando = null;
+
  function carregarPainel(){
 
 onSnapshot(
