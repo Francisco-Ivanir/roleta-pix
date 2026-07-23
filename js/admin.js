@@ -369,8 +369,6 @@ document.getElementById("editAtivoPremio").checked
 }
 
 );
-
-}
   
 document
 .getElementById("modalPremio")
