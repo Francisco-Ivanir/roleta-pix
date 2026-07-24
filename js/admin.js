@@ -469,3 +469,31 @@ alert("Erro ao desativar prêmio.");
 
 });
 
+document
+.getElementById("btnEntrar")
+.addEventListener("click",()=>{
+
+const senha =
+document
+.getElementById("senhaAdmin")
+.value;
+
+if(senha !== SENHA_ADMIN){
+
+alert("Senha incorreta.");
+
+return;
+
+}
+
+document
+.getElementById("loginAdmin")
+.style.display = "none";
+
+document
+.getElementById("painelAdmin")
+.style.display = "block";
+
+});
+
+
