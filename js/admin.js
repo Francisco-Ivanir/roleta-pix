@@ -200,20 +200,24 @@ linha.innerHTML = `
 <td>
 
 <button
-
 class="btnEditar"
-
 data-id="${id}"
-
 data-nome="${premio.nome}"
-
 data-peso="${premio.peso}"
-
 data-ativo="${premio.ativo}"
-
 >
 
 ✏️
+
+</button>
+
+<button
+class="btnExcluir"
+data-id="${id}"
+data-nome="${premio.nome}"
+>
+
+🗑️
 
 </button>
 
