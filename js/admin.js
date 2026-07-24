@@ -12,6 +12,26 @@ import {
 
 const SENHA_ADMIN = "123456";
 
+if(
+sessionStorage.getItem("adminLogado")
+==="true"
+){
+
+document
+.addEventListener("DOMContentLoaded",()=>{
+
+document
+.getElementById("loginAdmin")
+.style.display="none";
+
+document
+.getElementById("painelAdmin")
+.style.display="block";
+
+});
+
+}
+
 carregarPainel();
 
 carregarPremios();
