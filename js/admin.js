@@ -389,3 +389,33 @@ alert("Erro ao atualizar prêmio.");
 }
 
 });
+
+document.addEventListener("click",(e)=>{
+
+if(e.target.classList.contains("btnExcluir")){
+
+premioExcluir = e.target.dataset.id;
+
+document
+.getElementById("textoExcluirPremio")
+.innerText =
+`Tem certeza que deseja excluir "${e.target.dataset.nome}"?`;
+
+document
+.getElementById("modalExcluirPremio")
+.style.display="flex";
+
+}
+
+});
+
+document
+.getElementById("btnCancelarExcluir")
+.addEventListener("click",()=>{
+
+document
+.getElementById("modalExcluirPremio")
+.style.display="none";
+
+});
+
