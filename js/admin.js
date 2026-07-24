@@ -506,6 +506,11 @@ return;
 
 }
 
+  sessionStorage.setItem(
+"adminLogado",
+"true"
+);
+  
 document
 .getElementById("loginAdmin")
 .style.display = "none";
