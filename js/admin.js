@@ -10,6 +10,8 @@ import {
   doc
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
+const SENHA_ADMIN = "123456";
+
 carregarPainel();
 
 carregarPremios();
