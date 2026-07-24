@@ -419,3 +419,51 @@ document
 
 });
 
+document
+.getElementById("btnConfirmarExcluir")
+.addEventListener("click", async()=>{
+
+if(!premioExcluir){
+
+return;
+
+}
+
+try{
+
+await updateDoc(
+
+doc(
+db,
+"premios",
+premioExcluir
+),
+
+{
+
+ativo:false
+
+}
+
+);
+
+document
+.getElementById("modalExcluirPremio")
+.style.display="none";
+
+alert("Prêmio desativado.");
+
+premioExcluir = null;
+
+}
+
+catch(erro){
+
+console.error(erro);
+
+alert("Erro ao desativar prêmio.");
+
+}
+
+});
+
