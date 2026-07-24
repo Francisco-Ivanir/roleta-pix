@@ -16,6 +16,8 @@ carregarPremios();
 
 let premioEditando = null;
 
+let premioExcluir = null;
+
  function carregarPainel(){
 
 onSnapshot(
