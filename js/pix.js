@@ -24,7 +24,7 @@ export function pegarPagamentoAtual(){
 
 }
 
-const pixConfig = {
+let pixConfig = {
 
   chave:
   "00020126580014br.gov.bcb.pix01364414c932-5e48-4188-a572-7291c6cbb83a5204000053039865802BR5901N6001C62090505648266304230B",
