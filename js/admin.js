@@ -13,6 +13,41 @@ import {
 
 let senhaAdmin = "";
 
+async function carregarConfiguracoes(){
+
+try{
+
+const config =
+await getDoc(
+
+doc(
+db,
+"configuracoes",
+"geral"
+)
+
+);
+
+if(config.exists()){
+
+senhaAdmin =
+config.data().senhaAdmin;
+
+}
+
+}
+
+catch(erro){
+
+console.error(
+"Erro ao carregar configurações:",
+erro
+);
+
+}
+
+}
+
 if(
 sessionStorage.getItem("adminLogado")
 ==="true"
