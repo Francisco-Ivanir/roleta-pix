@@ -196,3 +196,24 @@ justify-content:space-between;
 margin-top:15px;
 
 }
+
+.topoAdmin{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:20px;
+
+}
+
+#btnSair{
+
+padding:8px 16px;
+
+cursor:pointer;
+
+}
+
