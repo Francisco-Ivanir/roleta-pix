@@ -385,5 +385,58 @@ erro
 
 }
 
+function carregarUltimosGanhadores(){
+
+onSnapshot(
+
+query(
+
+collection(db,"pagamentos"),
+
+orderBy("finalizadoEm","desc"),
+
+limit(5)
+
+),
+
+(snapshot)=>{
+
+const lista =
+document.getElementById("ultimosGanhadores");
+
+lista.innerHTML = "";
+
+if(snapshot.empty){
+
+lista.innerHTML =
+"<p>Nenhum sorteio realizado.</p>";
+
+return;
+
+}
+
+snapshot.forEach((doc)=>{
+
+const pagamento = doc.data();
+
+const item =
+document.createElement("p");
+
+item.innerHTML =
+
+`🏆 <strong>${pagamento.nomeCliente || "Cliente"}</strong>
+ganhou
+<strong>${pagamento.premio}</strong>`;
+
+lista.appendChild(item);
+
+});
+
+}
+
+);
+
+}
+
 
 
