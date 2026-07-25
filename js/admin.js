@@ -521,4 +521,16 @@ document
 
 });
 
+document
+.getElementById("btnSair")
+.addEventListener("click",()=>{
+
+sessionStorage.removeItem(
+"adminLogado"
+);
+
+location.reload();
+
+});
+
 
