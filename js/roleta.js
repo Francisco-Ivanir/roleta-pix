@@ -26,6 +26,8 @@ import {
 
 carregarPremiosFirebase();
 
+carregarUltimosGanhadores();
+
 async function carregarPremiosFirebase() {
 
   try {
