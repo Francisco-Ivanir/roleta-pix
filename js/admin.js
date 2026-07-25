@@ -536,7 +536,7 @@ document
 .getElementById("senhaAdmin")
 .value;
 
-if(senha !== SENHA_ADMIN){
+if(senha !== senhaAdmin){
 
 alert("Senha incorreta.");
 
