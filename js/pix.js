@@ -35,6 +35,48 @@ let pixConfig = {
 
 };
 
+async function carregarConfiguracoes(){
+
+try{
+
+const config =
+await getDoc(
+
+doc(
+db,
+"configuracoes",
+"geral"
+
+)
+
+);
+
+if(config.exists()){
+
+const dados =
+config.data();
+
+pixConfig.valor =
+dados.valorGiro;
+
+pixConfig.chave =
+dados.chavePix;
+
+}
+
+}
+
+catch(erro){
+
+console.error(
+"Erro ao carregar configurações PIX:",
+erro
+);
+
+}
+
+}
+
 export async function abrirModalPix(){
 
 
