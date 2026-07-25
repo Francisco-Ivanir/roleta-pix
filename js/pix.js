@@ -17,6 +17,8 @@ import {
   liberarGiro
 } from "./roleta.js";
 
+carregarConfiguracoes();
+
 let pagamentoAtual = null;
 
 export function pegarPagamentoAtual(){
