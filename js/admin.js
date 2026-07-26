@@ -105,6 +105,36 @@ document
 .value =
 dados.valorGiro;
 
+  document
+.getElementById("configNomeCampanha")
+.value =
+dados.nomeCampanha || "";
+
+document
+.getElementById("configChavePix")
+.value =
+dados.chavePix || "";
+
+document
+.getElementById("configRecebedor")
+.value =
+dados.recebedor || "";
+
+document
+.getElementById("configInstituicao")
+.value =
+dados.instituicao || "";
+
+document
+.getElementById("configCnpj")
+.value =
+dados.cnpjRecebedor || "";
+
+document
+.getElementById("configIdentificador")
+.value =
+dados.identificador || "";
+  
 }
 
 }
