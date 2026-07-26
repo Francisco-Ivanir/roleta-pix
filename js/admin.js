@@ -74,6 +74,8 @@ carregarPremios();
 
 carregarConfiguracoes();
 
+carregarConfiguracoesPainel();
+
 let premioEditando = null;
 
 let premioExcluir = null;
