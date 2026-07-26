@@ -376,6 +376,51 @@ document
 });
 
 document
+.getElementById("btnSalvarConfiguracoes")
+.addEventListener("click", async()=>{
+
+try{
+
+await updateDoc(
+
+doc(
+db,
+"configuracoes",
+"geral"
+),
+
+{
+
+valorGiro:
+Number(
+document
+.getElementById("configValorGiro")
+.value
+)
+
+}
+
+);
+
+alert(
+"Configurações salvas!"
+);
+
+}
+
+catch(erro){
+
+console.error(erro);
+
+alert(
+"Erro ao salvar configurações."
+);
+
+}
+
+});
+
+document
 
 .getElementById("btnFecharPremio")
 
