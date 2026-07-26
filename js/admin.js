@@ -78,6 +78,46 @@ let premioEditando = null;
 
 let premioExcluir = null;
 
+async function carregarConfiguracoesPainel(){
+
+try{
+
+const config =
+await getDoc(
+
+doc(
+db,
+"configuracoes",
+"geral"
+)
+
+);
+
+if(config.exists()){
+
+const dados =
+config.data();
+
+document
+.getElementById("configValorGiro")
+.value =
+dados.valorGiro;
+
+}
+
+}
+
+catch(erro){
+
+console.error(
+"Erro ao carregar configurações:",
+erro
+);
+
+}
+
+}
+  
  function carregarPainel(){
 
 onSnapshot(
