@@ -421,12 +421,42 @@ db,
 
 {
 
+nomeCampanha:
+document
+.getElementById("configNomeCampanha")
+.value,
+
 valorGiro:
 Number(
 document
 .getElementById("configValorGiro")
 .value
-)
+),
+
+chavePix:
+document
+.getElementById("configChavePix")
+.value,
+
+recebedor:
+document
+.getElementById("configRecebedor")
+.value,
+
+instituicao:
+document
+.getElementById("configInstituicao")
+.value,
+
+cnpjRecebedor:
+document
+.getElementById("configCnpj")
+.value,
+
+identificador:
+document
+.getElementById("configIdentificador")
+.value
 
 }
 
