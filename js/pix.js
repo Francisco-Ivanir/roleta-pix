@@ -167,6 +167,25 @@ erro
 
 }
 
+  document
+.getElementById("pixRecebedor")
+.innerText =
+pixConfig.recebedor;
+
+document
+.getElementById("pixInstituicao")
+.innerText =
+pixConfig.instituicao;
+
+document
+.getElementById("pixCnpj")
+.innerText =
+pixConfig.cnpj;
+
+document
+.getElementById("pixIdentificador")
+.innerText =
+pixConfig.identificador;
 
 }
 
