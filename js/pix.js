@@ -64,6 +64,18 @@ dados.valorGiro;
 pixConfig.chave =
 dados.chavePix;
 
+  pixConfig.recebedor =
+dados.recebedor || "";
+
+pixConfig.instituicao =
+dados.instituicao || "";
+
+pixConfig.cnpj =
+dados.cnpjRecebedor || "";
+
+pixConfig.identificador =
+dados.identificador || "";
+  
 }
 
 }
