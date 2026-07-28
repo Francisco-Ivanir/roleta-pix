@@ -405,3 +405,35 @@ font-size:16px;
 
 }
 
+.campanhaAtiva{
+
+background:#ecf7ff;
+
+border-left:6px solid #3498db;
+
+padding:18px;
+
+border-radius:10px;
+
+margin-bottom:25px;
+
+box-shadow:0 2px 8px rgba(0,0,0,.08);
+
+}
+
+.campanhaAtiva h2{
+
+margin-top:0;
+
+color:#2c3e50;
+
+}
+
+.campanhaAtiva p{
+
+margin:8px 0;
+
+font-size:16px;
+
+}
+
