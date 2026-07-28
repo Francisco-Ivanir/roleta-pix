@@ -231,3 +231,37 @@ box-shadow:0 2px 8px rgba(0,0,0,0.1);
 
 }
 
+.blocoAdmin label{
+
+display:block;
+
+font-weight:bold;
+
+margin-top:15px;
+
+margin-bottom:5px;
+
+}
+
+.blocoAdmin input{
+
+width:100%;
+
+padding:10px;
+
+border:1px solid #ddd;
+
+border-radius:8px;
+
+box-sizing:border-box;
+
+}
+
+.blocoAdmin button{
+
+margin-top:20px;
+
+width:100%;
+
+}
+
