@@ -134,6 +134,23 @@ document
 .getElementById("configIdentificador")
 .value =
 dados.identificador || "";
+
+  document
+.getElementById("resumoCampanha")
+.innerText =
+dados.nomeCampanha || "-";
+
+document
+.getElementById("resumoValor")
+.innerText =
+Number(dados.valorGiro || 0)
+.toFixed(2)
+.replace(".",",");
+
+document
+.getElementById("resumoRecebedor")
+.innerText =
+dados.recebedor || "-";
   
 }
 
