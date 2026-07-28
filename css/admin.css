@@ -123,7 +123,19 @@ color:#fff;
 
 }
 
+tbody tr:nth-child(even){
 
+background:#f8f9fa;
+
+}
+
+tbody tr:hover{
+
+background:#eef6ff;
+
+transition:.2s;
+
+}
 
 @media(max-width:600px){
 
