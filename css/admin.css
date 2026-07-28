@@ -377,3 +377,31 @@ color:#fff;
 
 }
 
+.topoPainel{
+
+text-align:center;
+
+margin-bottom:25px;
+
+}
+
+.topoPainel h1{
+
+margin:0;
+
+font-size:34px;
+
+color:#2c3e50;
+
+}
+
+.topoPainel p{
+
+margin-top:8px;
+
+color:#666;
+
+font-size:16px;
+
+}
+
