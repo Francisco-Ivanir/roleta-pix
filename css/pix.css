@@ -76,3 +76,12 @@ min-width:110px;
 
 }
 
+.dadosRecebedor,
+.dadosRecebedor p,
+.dadosRecebedor span,
+.dadosRecebedor strong{
+
+color:#2c3e50 !important;
+
+}
+
