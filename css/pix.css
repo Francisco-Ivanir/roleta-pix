@@ -76,31 +76,3 @@ min-width:110px;
 
 }
 
-.dadosRecebedor{
-
-background:yellow !important;
-
-border:3px solid red !important;
-
-display:block !important;
-
-}
-
-#pixRecebedor,
-#pixInstituicao,
-#pixCnpj,
-#pixIdentificador{
-
-background:red !important;
-
-color:white !important;
-
-font-size:20px !important;
-
-}
-
-body{
-
-border:10px solid red !important;
-
-}
