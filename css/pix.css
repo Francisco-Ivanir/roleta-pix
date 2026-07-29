@@ -13,3 +13,70 @@ border:1px solid #ccc;
 font-size:16px;
 
 }
+
+.dadosRecebedor{
+
+background:#f8f9fa;
+
+border:1px solid #e5e5e5;
+
+border-radius:12px;
+
+padding:15px;
+
+margin:18px 0;
+
+text-align:left;
+
+}
+
+.dadosRecebedor{
+
+background:#f8f9fa;
+
+border:1px solid #e5e5e5;
+
+border-radius:12px;
+
+padding:15px;
+
+margin:18px 0;
+
+text-align:left;
+
+}
+
+.dadosRecebedor h3{
+
+margin-top:0;
+
+margin-bottom:12px;
+
+color:#2c3e50;
+
+font-size:18px;
+
+text-align:center;
+
+}
+
+.dadosRecebedor p{
+
+margin:8px 0;
+
+font-size:15px;
+
+line-height:1.5;
+
+}
+
+.dadosRecebedor strong{
+
+color:#555;
+
+display:inline-block;
+
+min-width:110px;
+
+}
+
