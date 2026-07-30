@@ -18,18 +18,18 @@ font-size:16px;
 
 background:#f8f9fa;
 
-border:1px solid #e5e5e5;
+border:1px solid #ddd;
 
 border-radius:12px;
 
-padding:15px;
+padding:18px;
 
-margin:18px 0;
+margin:20px 0;
 
 text-align:left;
 
-  color:#2c3e50;
-  
+color:#2c3e50;
+
 }
 
 
@@ -49,11 +49,17 @@ text-align:center;
 
 .dadosRecebedor p{
 
-margin:8px 0;
+display:flex;
 
-font-size:15px;
+justify-content:space-between;
 
-line-height:1.5;
+gap:10px;
+
+margin:10px 0;
+
+font-size:14px;
+
+line-height:1.4;
 
 color:#2c3e50;
 
@@ -69,8 +75,6 @@ color:#2c3e50;
 .dadosRecebedor strong{
 
 color:#555;
-
-display:inline-block;
 
 min-width:110px;
 
