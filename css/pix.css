@@ -100,4 +100,18 @@ box-sizing:border-box;
 
 }
 
+.caixaPix::-webkit-scrollbar{
+
+width:6px;
+
+}
+
+.caixaPix::-webkit-scrollbar-thumb{
+
+background:#bbb;
+
+border-radius:10px;
+
+}
+
 
