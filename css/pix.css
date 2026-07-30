@@ -114,4 +114,45 @@ border-radius:10px;
 
 }
 
+@media (max-width:600px){
+
+.caixaPix{
+
+width:95%;
+
+max-height:90vh;
+
+padding:15px;
+
+}
+
+.dadosRecebedor p{
+
+display:block;
+
+margin:15px 0;
+
+font-size:15px;
+
+}
+
+
+.dadosRecebedor strong{
+
+display:block;
+
+margin-bottom:5px;
+
+}
+
+
+.dadosRecebedor span{
+
+display:block;
+
+}
+
+
+}
+
 
