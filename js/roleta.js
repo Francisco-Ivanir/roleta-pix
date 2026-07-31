@@ -440,5 +440,23 @@ lista.appendChild(item);
 
 }
 
+document
+.getElementById("btnFecharPremio")
+.addEventListener("click", ()=>{
 
+document
+.getElementById("modalPremio")
+.style.display = "none";
+
+});
+
+document
+.getElementById("btnFecharPremio")
+.addEventListener("click", ()=>{
+
+document
+.getElementById("modalPremio")
+.style.display = "none";
+
+});
 
