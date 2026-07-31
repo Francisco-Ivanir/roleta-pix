@@ -279,3 +279,23 @@ cursor:pointer;
 
 }
 
+.avisoPix{
+
+background:#fff8e1;
+
+border-left:4px solid #f39c12;
+
+padding:10px;
+
+border-radius:8px;
+
+font-size:14px;
+
+color:#555;
+
+text-align:center;
+
+margin:15px 0;
+
+}
+
