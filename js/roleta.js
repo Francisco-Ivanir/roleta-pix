@@ -450,13 +450,10 @@ document
 
 });
 
-document
-.getElementById("btnFecharPremio")
-.addEventListener("click", ()=>{
+setTimeout(()=>{
 
 document
 .getElementById("modalPremio")
-.style.display = "none";
+.style.display = "flex";
 
-});
-
+},3000);
