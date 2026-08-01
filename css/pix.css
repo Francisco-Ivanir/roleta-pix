@@ -339,6 +339,8 @@ text-align:center;
 
 box-sizing:border-box;
 
+  color:#2c3e50;
+
 }
 
 #tituloPremio{
@@ -388,6 +390,30 @@ border-radius:10px;
 font-size:18px;
 
 cursor:pointer;
+
+}
+
+.textoPremio{
+
+font-size:18px;
+
+color:#2c3e50;
+
+margin:15px 0;
+
+}
+
+#mensagemPremio{
+
+font-size:15px;
+
+color:#555;
+
+line-height:1.5;
+
+margin:20px 0;
+
+text-align:center;
 
 }
 
