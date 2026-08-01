@@ -452,8 +452,20 @@ document
 
 setTimeout(()=>{
 
+mostrarPremio("R$ 10,00");
+
+},3000);
+
+function mostrarPremio(nome){
+
+document
+.getElementById("nomePremio")
+.innerText = nome;
+
+
 document
 .getElementById("modalPremio")
 .style.display = "flex";
 
-},3000);
+}
+
