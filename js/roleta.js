@@ -233,6 +233,8 @@ function girarAtePremio(indicePremio, premioSorteado) {
       .innerText =
       "Resultado: " + premioSorteado.nome;
 
+      mostrarPremio(premioSorteado.nome);
+      
       finalizarPagamento(premioSorteado);
 
       return;
@@ -450,11 +452,6 @@ document
 
 });
 
-setTimeout(()=>{
-
-mostrarPremio("R$ 10,00");
-
-},3000);
 
 function mostrarPremio(nome){
 
