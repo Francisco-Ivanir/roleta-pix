@@ -485,14 +485,3 @@ font-size:16px;
 }
 
 
-
-@media(max-width:700px){
-
-.dashboardCards{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-}
-
