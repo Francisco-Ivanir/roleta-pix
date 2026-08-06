@@ -10,9 +10,15 @@ body{
 }
 
 .container{
+
     width:90%;
+
     max-width:450px;
+
     text-align:center;
+
+    padding:20px 0;
+
 }
 
 h1{
