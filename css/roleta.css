@@ -161,6 +161,12 @@ word-break:break-all;
 
 font-size:14px;
 
+   
+    #btnLiberar{
+
+display:none;
+
+}
 color:#555;
 
 }
