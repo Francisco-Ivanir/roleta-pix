@@ -473,6 +473,11 @@ document
 identificador:
 document
 .getElementById("configIdentificador")
+.value,
+
+  statusCampanha:
+document
+.getElementById("configStatusCampanha")
 .value
 
 }
