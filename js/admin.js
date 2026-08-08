@@ -110,6 +110,11 @@ dados.valorGiro;
 .value =
 dados.nomeCampanha || "";
 
+  document
+.getElementById("configStatusCampanha")
+.value =
+dados.statusCampanha || "ativa";
+  
 document
 .getElementById("configChavePix")
 .value =
