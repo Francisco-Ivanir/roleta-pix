@@ -88,6 +88,7 @@ let girando = false;
 
 let giroLiberado = false;
 
+let campanhaAtiva = true;
 
 export function liberarGiro(){
 
