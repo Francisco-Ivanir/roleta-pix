@@ -156,6 +156,13 @@ document
 .getElementById("resumoRecebedor")
 .innerText =
 dados.recebedor || "-";
+
+  document
+.getElementById("resumoStatusCampanha")
+.innerText =
+dados.statusCampanha === "pausada"
+? "🔴 Pausada"
+: "🟢 Ativa";
   
 }
 
