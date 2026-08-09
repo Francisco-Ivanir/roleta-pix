@@ -29,6 +29,8 @@ carregarPremiosFirebase();
 
 carregarUltimosGanhadores();
 
+carregarStatusCampanha();
+
 async function carregarPremiosFirebase() {
 
   try {
@@ -89,6 +91,41 @@ let girando = false;
 let giroLiberado = false;
 
 let campanhaAtiva = true;
+
+async function carregarStatusCampanha(){
+
+try{
+
+const configuracao = await getDoc(
+doc(db,"configuracoes","geral")
+);
+
+if(configuracao.exists()){
+
+const dados = configuracao.data();
+
+campanhaAtiva =
+dados.statusCampanha !== "pausada";
+
+console.log(
+"Status da campanha:",
+campanhaAtiva
+);
+
+}
+
+}
+
+catch(erro){
+
+console.error(
+"Erro ao carregar status da campanha:",
+erro
+);
+
+}
+
+}
 
 export function liberarGiro(){
 
