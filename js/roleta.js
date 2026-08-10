@@ -310,6 +310,14 @@ document
 
  if (girando) return;
 
+  if (!campanhaAtiva) {
+
+alert("🔴 Campanha temporariamente pausada.\n\nVolte em breve!");
+
+return;
+
+}
+  
 if (!giroLiberado) {
 
   abrirModalCliente();
