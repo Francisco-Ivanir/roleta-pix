@@ -107,6 +107,8 @@ const dados = configuracao.data();
 campanhaAtiva =
 dados.statusCampanha !== "pausada";
 
+  atualizarBotaoCampanha();
+  
 console.log(
 "Status da campanha:",
 campanhaAtiva
