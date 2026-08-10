@@ -127,6 +127,32 @@ erro
 
 }
 
+function atualizarBotaoCampanha(){
+
+const botao =
+document.getElementById("btnGirar");
+
+
+if(!campanhaAtiva){
+
+botao.disabled = true;
+
+botao.innerText =
+"🔴 Campanha Pausada";
+
+}
+
+else{
+
+botao.disabled = false;
+
+botao.innerText =
+"GIRAR";
+
+}
+
+}
+
 export function liberarGiro(){
 
   giroLiberado = true;
