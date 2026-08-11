@@ -277,17 +277,19 @@ estatisticas[premio] =
 }
 
 
+if (pagamento.status === "finalizado") {
+
 const linha =
 document.createElement("tr");
 
-  let dataHora = "-";
+let dataHora = "-";
 
 if (pagamento.finalizadoEm) {
 
-  dataHora =
-  pagamento.finalizadoEm
-  .toDate()
-  .toLocaleString("pt-BR");
+dataHora =
+pagamento.finalizadoEm
+.toDate()
+.toLocaleString("pt-BR");
 
 }
 
@@ -301,13 +303,13 @@ linha.innerHTML = `
 
 <td>${pagamento.premio || "-"}</td>
 
-<td>${pagamento.status}</td>
+<td>✅ Finalizado</td>
 
 `;
 
-
 lista.appendChild(linha);
 
+}
 
 });
 
