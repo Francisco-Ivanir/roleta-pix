@@ -238,15 +238,12 @@ pagamentoAtual
 }
 
 
-liberarGiro();
-
-
 document
 .getElementById("modalPix")
 .style.display="none";
 
 
-alert("Pagamento confirmado! Giro liberado.");
+alert("Solicitação enviada! Aguarde a confirmação do pagamento.");
 
 
 });
