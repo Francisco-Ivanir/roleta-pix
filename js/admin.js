@@ -254,7 +254,22 @@ linhaPendente.innerHTML = `
 .toFixed(2)
 .replace(".",",")}</td>
 
-<td>⏳ Pendente</td>
+<td>
+
+⏳ Pendente
+
+<br><br>
+
+<button
+class="btnConfirmarPagamento"
+data-id="${doc.id}"
+>
+
+✅ Confirmar
+
+</button>
+
+</td>
 
 `;
 
