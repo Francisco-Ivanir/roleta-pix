@@ -207,8 +207,12 @@ const estatisticas = {};
 const lista =
 document.getElementById("listaPagamentos");
 
-
 lista.innerHTML = "";
+
+const listaPendentes =
+document.getElementById("listaPendentes");
+
+listaPendentes.innerHTML = "";
 
 
 snapshot.forEach((doc)=>{
@@ -223,6 +227,38 @@ total++;
 if(pagamento.status === "pendente"){
 
 pendentes++;
+
+const linhaPendente =
+document.createElement("tr");
+
+let dataPendente = "-";
+
+if (pagamento.criadoEm) {
+
+dataPendente =
+pagamento.criadoEm
+.toDate()
+.toLocaleString("pt-BR");
+
+}
+
+linhaPendente.innerHTML = `
+
+<td>${dataPendente}</td>
+
+<td>${pagamento.nomeCliente || "-"}</td>
+
+<td>${pagamento.whatsappCliente || "-"}</td>
+
+<td>R$ ${Number(pagamento.valor || 0)
+.toFixed(2)
+.replace(".",",")}</td>
+
+<td>⏳ Pendente</td>
+
+`;
+
+listaPendentes.appendChild(linhaPendente);
 
 }
 
