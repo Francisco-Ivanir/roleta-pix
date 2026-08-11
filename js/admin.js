@@ -701,6 +701,15 @@ document
 
 }
 
+  if(e.target.classList.contains("btnConfirmarPagamento")){
+
+console.log(
+"Botão confirmar clicado:",
+e.target.dataset.id
+);
+
+}
+  
 });
 
 document
