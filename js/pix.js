@@ -219,7 +219,7 @@ pagamentoAtual
 
 {
 
-status:"confirmado",
+status:"pendente",
 
 confirmadoEm:
 serverTimestamp()
