@@ -187,7 +187,7 @@ query(
 
 collection(db,"pagamentos"),
 
-orderBy("finalizadoEm","desc")
+orderBy("criadoEm","desc")
 
 ),
 
