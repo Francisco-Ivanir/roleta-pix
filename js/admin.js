@@ -702,12 +702,45 @@ document
 
 }
 
-  if(e.target.classList.contains("btnConfirmarPagamento")){
+ if(e.target.classList.contains("btnConfirmarPagamento")){
+
+const pagamentoId =
+e.target.dataset.id;
+
+try{
+
+await updateDoc(
+
+doc(
+db,
+"pagamentos",
+pagamentoId
+),
+
+{
+
+status:"confirmado",
+
+confirmadoEm:
+serverTimestamp()
+
+}
+
+);
 
 console.log(
-"Botão confirmar clicado:",
-e.target.dataset.id
+"Pagamento confirmado:",
+pagamentoId
 );
+
+}catch(erro){
+
+console.error(
+"Erro ao confirmar pagamento:",
+erro
+);
+
+}
 
 }
   
