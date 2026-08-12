@@ -685,7 +685,7 @@ alert("Erro ao atualizar prêmio.");
 
 });
 
-document.addEventListener("click",(e)=>{
+document.addEventListener("click",async(e)=>{
 
 if(e.target.classList.contains("btnExcluir")){
 
