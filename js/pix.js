@@ -6,7 +6,8 @@ import {
   updateDoc,
   doc,
   getDoc,
-  serverTimestamp
+  serverTimestamp,
+  onSnapshot
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
 import {
@@ -20,6 +21,8 @@ import {
 carregarConfiguracoes();
 
 let pagamentoAtual = null;
+
+let pararMonitoramentoPagamento = null;
 
 export function pegarPagamentoAtual(){
 
@@ -154,7 +157,42 @@ console.log(
 pagamento.id
 );
 
+pararMonitoramentoPagamento =
+onSnapshot(
 
+doc(
+db,
+"pagamentos",
+pagamentoAtual
+),
+
+(snapshot)=>{
+
+if(!snapshot.exists()){
+
+return;
+
+}
+
+const dados =
+snapshot.data();
+
+console.log(
+"Status do pagamento:",
+dados.status
+);
+
+if(dados.status === "confirmado"){
+
+console.log(
+"Pagamento confirmado pelo Admin!"
+);
+
+}
+
+}
+
+);
 
 }
 catch(erro){
