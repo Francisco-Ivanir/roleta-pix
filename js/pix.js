@@ -188,8 +188,20 @@ console.log(
 "Pagamento confirmado pelo Admin!"
 );
 
-  liberarGiro();
-  
+liberarGiro();
+
+if(pararMonitoramentoPagamento){
+
+pararMonitoramentoPagamento();
+
+pararMonitoramentoPagamento = null;
+
+console.log(
+"Monitoramento do pagamento encerrado."
+);
+
+}
+
 }
 
 }
