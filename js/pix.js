@@ -188,6 +188,8 @@ console.log(
 "Pagamento confirmado pelo Admin!"
 );
 
+  liberarGiro();
+  
 }
 
 }
