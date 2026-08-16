@@ -71,6 +71,8 @@ document
 
 carregarPainel();
 
+carregarHistoricoPagamentos();
+
 carregarPremios();
 
 carregarConfiguracoes();
@@ -884,4 +886,10 @@ location.reload();
 
 });
 
+function carregarHistoricoPagamentos(){
 
+console.log(
+"Histórico iniciado"
+);
+
+}
