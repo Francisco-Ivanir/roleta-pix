@@ -210,6 +210,11 @@ document.getElementById("listaPagamentos");
 
 lista.innerHTML = "";
 
+  const historico =
+document.getElementById("historicoPagamentos");
+
+historico.innerHTML = "";
+  
 const listaPendentes =
 document.getElementById("listaPendentes");
 
@@ -221,7 +226,38 @@ snapshot.forEach((doc)=>{
 
 const pagamento = doc.data();
 
+const linhaHistorico =
+document.createElement("tr");
 
+let dataHistorico = "-";
+
+if(pagamento.criadoEm){
+
+dataHistorico =
+pagamento.criadoEm
+.toDate()
+.toLocaleString("pt-BR");
+
+}
+
+linhaHistorico.innerHTML = `
+
+<td>${dataHistorico}</td>
+
+<td>${pagamento.nomeCliente || "-"}</td>
+
+<td>${pagamento.whatsappCliente || "-"}</td>
+
+<td>R$ ${(pagamento.valor || 0).toFixed(2).replace(".",",")}</td>
+
+<td>${pagamento.status || "-"}</td>
+
+<td>${pagamento.premio || "-"}</td>
+
+`;
+
+historico.appendChild(linhaHistorico);
+  
 total++;
 
 
