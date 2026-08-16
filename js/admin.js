@@ -906,7 +906,19 @@ R$ ${(pagamento.valor || 0)
 .replace(".",",")}
 </td>
 
-<td>${pagamento.status || "-"}</td>
+<td>
+
+${
+pagamento.status === "pendente"
+? "🟠 Pendente"
+: pagamento.status === "confirmado"
+? "🔵 Confirmado"
+: pagamento.status === "finalizado"
+? "🟢 Finalizado"
+: pagamento.status || "-"
+}
+
+</td>
 
 <td>${pagamento.premio || "-"}</td>
 
