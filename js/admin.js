@@ -906,6 +906,53 @@ snapshot.size,
 "pagamentos"
 );
 
+  const historico =
+document.getElementById("historicoPagamentos");
+
+historico.innerHTML = "";
+
+snapshot.forEach((doc)=>{
+
+const pagamento = doc.data();
+
+let dataHora = "-";
+
+if(pagamento.criadoEm){
+
+dataHora =
+pagamento.criadoEm
+.toDate()
+.toLocaleString("pt-BR");
+
+}
+
+const linha =
+document.createElement("tr");
+
+linha.innerHTML = `
+
+<td>${dataHora}</td>
+
+<td>${pagamento.nomeCliente || "-"}</td>
+
+<td>${pagamento.whatsappCliente || "-"}</td>
+
+<td>
+R$ ${(pagamento.valor || 0)
+.toFixed(2)
+.replace(".",",")}
+</td>
+
+<td>${pagamento.status || "-"}</td>
+
+<td>${pagamento.premio || "-"}</td>
+
+`;
+
+historico.appendChild(linha);
+
+});
+  
 }
 
 );
