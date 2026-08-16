@@ -888,8 +888,26 @@ location.reload();
 
 function carregarHistoricoPagamentos(){
 
+onSnapshot(
+
+query(
+
+collection(db,"pagamentos"),
+
+orderBy("criadoEm","desc")
+
+),
+
+(snapshot)=>{
+
 console.log(
-"Histórico iniciado"
+"Histórico carregado:",
+snapshot.size,
+"pagamentos"
+);
+
+}
+
 );
 
 }
