@@ -946,3 +946,64 @@ historico.appendChild(linha);
 );
 
 }
+
+function mostrarHistorico(dados){
+
+  const historico =
+    document.getElementById("historicoPagamentos");
+
+  historico.innerHTML = "";
+
+  dados.forEach((pagamento)=>{
+
+    let dataHora = "-";
+
+    if(pagamento.criadoEm){
+
+      dataHora =
+        pagamento.criadoEm
+        .toDate()
+        .toLocaleString("pt-BR");
+
+    }
+
+    const linha =
+      document.createElement("tr");
+
+    linha.innerHTML = `
+
+      <td>${dataHora}</td>
+
+      <td>${pagamento.nomeCliente || "-"}</td>
+
+      <td>${pagamento.whatsappCliente || "-"}</td>
+
+      <td>
+        R$ ${(pagamento.valor || 0)
+        .toFixed(2)
+        .replace(".",",")}
+      </td>
+
+      <td>
+
+        ${
+          pagamento.status === "pendente"
+          ? "🟠 Pendente"
+          : pagamento.status === "confirmado"
+          ? "🔵 Confirmado"
+          : pagamento.status === "finalizado"
+          ? "🟢 Finalizado"
+          : pagamento.status || "-"
+        }
+
+      </td>
+
+      <td>${pagamento.premio || "-"}</td>
+
+    `;
+
+    historico.appendChild(linha);
+
+  });
+
+}
