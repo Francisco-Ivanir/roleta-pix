@@ -886,6 +886,11 @@ id: doc.id,
 });
 
 });
+
+  console.log(
+"Pagamentos armazenados:",
+historicoDados.length
+);
   
 snapshot.forEach((doc)=>{
 
