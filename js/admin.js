@@ -851,6 +851,8 @@ location.reload();
 
 function carregarHistoricoPagamentos(){
 
+  let historicoDados = [];
+  
 onSnapshot(
 
 query(
@@ -874,6 +876,17 @@ document.getElementById("historicoPagamentos");
 
 historico.innerHTML = "";
 
+  historicoDados = [];
+
+snapshot.forEach((doc)=>{
+
+historicoDados.push({
+id: doc.id,
+...doc.data()
+});
+
+});
+  
 snapshot.forEach((doc)=>{
 
 const pagamento = doc.data();
