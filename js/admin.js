@@ -865,12 +865,6 @@ orderBy("criadoEm","desc")
 
 (snapshot)=>{
 
-console.log(
-"Histórico carregado:",
-snapshot.size,
-"pagamentos"
-);
-
   const historico =
 document.getElementById("historicoPagamentos");
 
