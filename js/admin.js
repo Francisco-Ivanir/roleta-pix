@@ -853,7 +853,7 @@ location.reload();
 
 function carregarHistoricoPagamentos(){
 
-  let historicoDados = [];
+ historicoDados = [];
   
 onSnapshot(
 
