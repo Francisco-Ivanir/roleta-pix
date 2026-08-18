@@ -79,6 +79,8 @@ carregarConfiguracoes();
 
 carregarConfiguracoesPainel();
 
+let historicoDados = [];
+
 let premioEditando = null;
 
 let premioExcluir = null;
@@ -891,12 +893,26 @@ mostrarHistorico(historicoDados);
 
 document
 .getElementById("filtroHistorico")
-.addEventListener("change", (e)=>{
+.addEventListener("change",(e)=>{
 
-console.log(
-"Filtro selecionado:",
-e.target.value
+const filtro =
+e.target.value;
+
+if(filtro === "todos"){
+
+mostrarHistorico(historicoDados);
+
+return;
+
+}
+
+const filtrados =
+historicoDados.filter(
+pagamento =>
+pagamento.status === filtro
 );
+
+mostrarHistorico(filtrados);
 
 });
 
