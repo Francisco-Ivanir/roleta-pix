@@ -69,6 +69,8 @@ document
 
 }
 
+let historicoDados = [];
+
 carregarPainel();
 
 carregarHistoricoPagamentos();
@@ -78,8 +80,6 @@ carregarPremios();
 carregarConfiguracoes();
 
 carregarConfiguracoesPainel();
-
-let historicoDados = [];
 
 let premioEditando = null;
 
