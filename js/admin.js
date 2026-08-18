@@ -889,6 +889,17 @@ mostrarHistorico(historicoDados);
 
 }
 
+document
+.getElementById("filtroHistorico")
+.addEventListener("change", (e)=>{
+
+console.log(
+"Filtro selecionado:",
+e.target.value
+);
+
+});
+
 function mostrarHistorico(dados){
 
   const historico =
