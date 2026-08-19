@@ -71,6 +71,8 @@ document
 
 let historicoDados = [];
 
+let filtroAtualHistorico = "todos";
+
 carregarPainel();
 
 carregarHistoricoPagamentos();
@@ -898,6 +900,8 @@ document
 const filtro =
 e.target.value;
 
+  filtroAtualHistorico = filtro;
+  
 if(filtro === "todos"){
 
 mostrarHistorico(historicoDados);
