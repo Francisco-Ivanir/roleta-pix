@@ -885,7 +885,21 @@ id: doc.id,
 
 });
   
+if(filtroAtualHistorico === "todos"){
+
 mostrarHistorico(historicoDados);
+
+}else{
+
+const filtrados =
+historicoDados.filter(
+pagamento =>
+pagamento.status === filtroAtualHistorico
+);
+
+mostrarHistorico(filtrados);
+
+}
   
 }
 
