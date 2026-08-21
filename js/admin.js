@@ -939,6 +939,14 @@ function mostrarHistorico(dados){
   const historico =
     document.getElementById("historicoPagamentos");
 
+  const contador =
+document.getElementById("contadorHistorico");
+
+contador.innerText =
+"Exibindo: " +
+dados.length +
+" pagamentos";
+  
   historico.innerHTML = "";
 
   dados.forEach((pagamento)=>{
