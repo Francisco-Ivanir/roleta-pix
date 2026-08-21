@@ -942,10 +942,14 @@ function mostrarHistorico(dados){
   const contador =
 document.getElementById("contadorHistorico");
 
+if(contador){
+
 contador.innerText =
 "Exibindo: " +
 dados.length +
 " pagamentos";
+
+}
   
   historico.innerHTML = "";
 
