@@ -709,6 +709,10 @@ document
 
  if(e.target.classList.contains("btnConfirmarPagamento")){
 
+   e.target.disabled = true;
+
+e.target.innerText = "Confirmando...";
+   
 const pagamentoId =
 e.target.dataset.id;
 
