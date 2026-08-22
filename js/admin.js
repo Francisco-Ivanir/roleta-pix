@@ -832,6 +832,22 @@ console.log(
 pagamento
 );
 
+    alert(
+"👤 Cliente: " +
+(pagamento.nomeCliente || "-") +
+
+"\n📱 WhatsApp: " +
+(pagamento.whatsappCliente || "-") +
+
+"\n💰 Valor: R$ " +
+Number(pagamento.valor || 0)
+.toFixed(2)
+.replace(".",",") +
+
+"\n📌 Status: " +
+(pagamento.status || "-")
+);
+    
 }
   
 });
