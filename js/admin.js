@@ -716,6 +716,27 @@ e.target.innerText = "Confirmando...";
 const pagamentoId =
 e.target.dataset.id;
 
+   const pagamentoRef =
+doc(
+db,
+"pagamentos",
+pagamentoId
+);
+
+const pagamentoSnap =
+await getDoc(pagamentoRef);
+
+if(!pagamentoSnap.exists()){
+
+alert("❌ Pagamento não encontrado.");
+
+return;
+
+}
+
+const pagamento =
+pagamentoSnap.data();
+   
 try{
 
 await updateDoc(
