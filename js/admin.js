@@ -793,6 +793,18 @@ erro
 }
 
 }
+ 
+  if(e.target.classList.contains("btnVerPagamento")){
+
+const pagamentoId =
+e.target.dataset.id;
+
+console.log(
+"Ver detalhes:",
+pagamentoId
+);
+
+}
   
 });
 
