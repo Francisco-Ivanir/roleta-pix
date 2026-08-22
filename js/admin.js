@@ -763,8 +763,15 @@ console.log(
 pagamentoId
 );
 
-  alert(
-"✅ Pagamento confirmado com sucesso!"
+ alert(
+"✅ Pagamento confirmado!\n\n" +
+"Cliente: " +
+(pagamento.nomeCliente || "-") +
+"\n" +
+"Valor: R$ " +
+Number(pagamento.valor || 0)
+.toFixed(2)
+.replace(".",",")
 );
   
 }catch(erro){
