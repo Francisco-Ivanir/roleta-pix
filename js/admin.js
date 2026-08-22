@@ -799,9 +799,37 @@ erro
 const pagamentoId =
 e.target.dataset.id;
 
-console.log(
-"Ver detalhes:",
+
+const pagamentoSnap =
+await getDoc(
+
+doc(
+db,
+"pagamentos",
 pagamentoId
+)
+
+);
+
+
+if(!pagamentoSnap.exists()){
+
+alert(
+"Pagamento não encontrado."
+);
+
+return;
+
+}
+
+
+const pagamento =
+pagamentoSnap.data();
+
+
+console.log(
+"Detalhes pagamento:",
+pagamento
 );
 
 }
