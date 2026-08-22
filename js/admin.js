@@ -275,6 +275,15 @@ data-id="${doc.id}"
 
 </button>
 
+<button
+class="btnVerPagamento"
+data-id="${doc.id}"
+>
+
+👁 Ver
+
+</button>
+
 </td>
 
 `;
