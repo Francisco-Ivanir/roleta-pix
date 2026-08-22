@@ -742,6 +742,10 @@ console.log(
 pagamentoId
 );
 
+  alert(
+"✅ Pagamento confirmado com sucesso!"
+);
+  
 }catch(erro){
 
 console.error(
