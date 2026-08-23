@@ -583,6 +583,17 @@ alert(
 });
 
 document
+.getElementById("btnFecharDetalhes")
+.addEventListener("click",()=>{
+
+document
+.getElementById("modalDetalhesPagamento")
+.style.display =
+"none";
+
+});
+
+document
 
 .getElementById("btnFecharPremio")
 
