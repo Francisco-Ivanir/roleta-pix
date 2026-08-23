@@ -832,21 +832,40 @@ console.log(
 pagamento
 );
 
-    alert(
+  document
+.getElementById("detalheCliente")
+.innerText =
 "👤 Cliente: " +
-(pagamento.nomeCliente || "-") +
+(pagamento.nomeCliente || "-");
 
-"\n📱 WhatsApp: " +
-(pagamento.whatsappCliente || "-") +
 
-"\n💰 Valor: R$ " +
+document
+.getElementById("detalheWhatsapp")
+.innerText =
+"📱 WhatsApp: " +
+(pagamento.whatsappCliente || "-");
+
+
+document
+.getElementById("detalheValor")
+.innerText =
+"💰 Valor: R$ " +
 Number(pagamento.valor || 0)
 .toFixed(2)
-.replace(".",",") +
+.replace(".",",");
 
-"\n📌 Status: " +
-(pagamento.status || "-")
-);
+
+document
+.getElementById("detalheStatus")
+.innerText =
+"📌 Status: " +
+(pagamento.status || "-");
+
+
+document
+.getElementById("modalDetalhesPagamento")
+.style.display =
+"flex";
     
 }
   
