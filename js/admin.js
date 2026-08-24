@@ -583,6 +583,23 @@ alert(
 });
 
 document
+.getElementById("modalDetalhesPagamento")
+.addEventListener("click",(e)=>{
+
+if(
+e.target.id === "modalDetalhesPagamento"
+){
+
+document
+.getElementById("modalDetalhesPagamento")
+.style.display =
+"none";
+
+}
+
+});
+
+document
 .getElementById("btnFecharDetalhes")
 .addEventListener("click",()=>{
 
