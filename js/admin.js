@@ -503,6 +503,24 @@ document
 });
 
 document
+.getElementById("btnBuscarWhatsApp")
+.addEventListener("click",()=>{
+
+const numero =
+document
+.getElementById("buscarWhatsApp")
+.value
+.trim();
+
+
+console.log(
+"Buscar WhatsApp:",
+numero
+);
+
+});
+
+document
 .getElementById("btnSalvarConfiguracoes")
 .addEventListener("click", async()=>{
 
