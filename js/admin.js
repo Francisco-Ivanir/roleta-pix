@@ -556,7 +556,23 @@ console.log(
 resultados
 );
 
+const resultadoBusca =
+document.getElementById(
+"resultadoBuscaWhatsApp"
+);
 
+resultadoBusca.innerHTML =
+`
+<h3>🔎 Resultado da Busca</h3>
+
+<p>
+<strong>
+${resultados.length}
+</strong>
+pagamentos encontrados.
+</p>
+`;
+  
 }
 
 );
