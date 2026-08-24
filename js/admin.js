@@ -753,6 +753,36 @@ e.target.innerText = "Confirmando...";
 const pagamentoId =
 e.target.dataset.id;
 
+   const pagamentoSnap =
+await getDoc(
+
+doc(
+db,
+"pagamentos",
+pagamentoId
+)
+
+);
+
+
+if(pagamentoSnap.exists()){
+
+const dados =
+pagamentoSnap.data();
+
+
+if(dados.status !== "pendente"){
+
+alert(
+"⚠️ Este pagamento já foi confirmado."
+);
+
+return;
+
+}
+
+}
+   
    const pagamentoRef =
 doc(
 db,
