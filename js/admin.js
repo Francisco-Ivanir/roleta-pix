@@ -514,9 +514,51 @@ document
 .trim();
 
 
-console.log(
-"Buscar WhatsApp:",
+const busca =
+query(
+
+collection(db,"pagamentos"),
+
+where(
+"whatsappCliente",
+"==",
 numero
+)
+
+);
+
+
+onSnapshot(
+
+busca,
+
+(snapshot)=>{
+
+
+let resultados = [];
+
+
+snapshot.forEach((doc)=>{
+
+resultados.push({
+
+id: doc.id,
+
+...doc.data()
+
+});
+
+});
+
+
+console.log(
+"Pagamentos encontrados:",
+resultados
+);
+
+
+}
+
 );
 
 });
