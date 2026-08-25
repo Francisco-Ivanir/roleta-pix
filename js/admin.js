@@ -566,13 +566,7 @@ document.getElementById(
 "resultadoBuscaWhatsApp"
 );
 
-const resultadoBusca =
-document.getElementById(
-"resultadoBuscaWhatsApp"
-);
-
-
-resultadoBusca.innerHTML = `
+resultadoBusca.innerHTML += `
 
 <h3>🔎 Resultado da Busca</h3>
 
