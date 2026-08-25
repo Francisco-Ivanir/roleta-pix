@@ -512,8 +512,6 @@ document
 .getElementById("buscarWhatsApp")
 .value
 .trim();
-
-resultadoBusca.innerHTML = "";
   
 const busca =
 query(
