@@ -513,7 +513,8 @@ document
 .value
 .trim();
 
-
+resultadoBusca.innerHTML = "";
+  
 const busca =
 query(
 
