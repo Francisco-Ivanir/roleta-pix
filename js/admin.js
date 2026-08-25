@@ -550,7 +550,12 @@ id: doc.id,
 
 });
 
+resultados.sort((a,b)=>{
 
+return b.criadoEm.toMillis() - a.criadoEm.toMillis();
+
+});
+  
 console.log(
 "Pagamentos encontrados:",
 resultados
