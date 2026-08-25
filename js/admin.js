@@ -566,7 +566,13 @@ document.getElementById(
 "resultadoBuscaWhatsApp"
 );
 
-let html = `
+const resultadoBusca =
+document.getElementById(
+"resultadoBuscaWhatsApp"
+);
+
+
+resultadoBusca.innerHTML = `
 
 <h3>🔎 Resultado da Busca</h3>
 
@@ -579,6 +585,14 @@ pagamentos encontrados.
 
 `;
 
+
+const tabela =
+document.getElementById(
+"tabelaBuscaWhatsApp"
+);
+
+
+tabela.innerHTML = "";
 
 
 resultados.forEach((pagamento)=>{
@@ -597,40 +611,55 @@ pagamento.criadoEm
 }
 
 
-html += `
+const linha =
+document.createElement("tr");
 
-<hr>
 
-<p>
-📅 ${data}
-</p>
+linha.innerHTML = `
 
-<p>
-👤 ${pagamento.nomeCliente || "-"}
-</p>
+<td>${data}</td>
 
-<p>
-💰 R$ ${
+<td>${pagamento.nomeCliente || "-"}</td>
+
+<td>${pagamento.whatsappCliente || "-"}</td>
+
+<td>
+R$ ${
 Number(pagamento.valor || 0)
 .toFixed(2)
 .replace(".",",")
 }
-</p>
+</td>
 
-<p>
-📌 ${pagamento.status || "-"}
-</p>
+<td>
 
-<p>
-🏆 ${pagamento.premio || "-"}
-</p>
+${
+pagamento.status === "pendente"
+
+? "🟠 Pendente"
+
+: pagamento.status === "confirmado"
+
+? "🔵 Confirmado"
+
+: pagamento.status === "finalizado"
+
+? "🟢 Finalizado"
+
+: pagamento.status || "-"
+
+}
+
+</td>
+
+<td>${pagamento.premio || "-"}</td>
 
 `;
 
+
+tabela.appendChild(linha);
+
 });
-
-
-resultadoBusca.innerHTML = html;
   
 }
 
