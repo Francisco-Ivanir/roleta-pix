@@ -561,8 +561,8 @@ document.getElementById(
 "resultadoBuscaWhatsApp"
 );
 
-resultadoBusca.innerHTML =
-`
+let html = `
+
 <h3>🔎 Resultado da Busca</h3>
 
 <p>
@@ -571,7 +571,61 @@ ${resultados.length}
 </strong>
 pagamentos encontrados.
 </p>
+
 `;
+
+
+
+resultados.forEach((pagamento)=>{
+
+
+let data = "-";
+
+
+if(pagamento.criadoEm){
+
+data =
+pagamento.criadoEm
+.toDate()
+.toLocaleString("pt-BR");
+
+}
+
+
+html += `
+
+<hr>
+
+<p>
+📅 ${data}
+</p>
+
+<p>
+👤 ${pagamento.nomeCliente || "-"}
+</p>
+
+<p>
+💰 R$ ${
+Number(pagamento.valor || 0)
+.toFixed(2)
+.replace(".",",")
+}
+</p>
+
+<p>
+📌 ${pagamento.status || "-"}
+</p>
+
+<p>
+🏆 ${pagamento.premio || "-"}
+</p>
+
+`;
+
+});
+
+
+resultadoBusca.innerHTML = html;
   
 }
 
