@@ -565,8 +565,8 @@ document.getElementById(
 "resultadoBuscaWhatsApp"
 );
 
-resultadoBusca.innerHTML = "Teste de busca funcionando";
-
+resultadoBusca.innerHTML = "";
+  
 <h3>🔎 Resultado da Busca</h3>
 
 <p>
