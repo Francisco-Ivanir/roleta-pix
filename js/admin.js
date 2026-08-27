@@ -585,6 +585,73 @@ if(tabela){
 tabela.innerHTML = "";
 
 }
+
+  resultados.forEach((pagamento)=>{
+
+
+let data = "-";
+
+
+if(pagamento.criadoEm){
+
+data =
+pagamento.criadoEm
+.toDate()
+.toLocaleString("pt-BR");
+
+}
+
+
+const linha =
+document.createElement("tr");
+
+
+linha.innerHTML = `
+
+<td>${data}</td>
+
+<td>${pagamento.nomeCliente || "-"}</td>
+
+<td>${pagamento.whatsappCliente || "-"}</td>
+
+<td>
+R$ ${
+Number(pagamento.valor || 0)
+.toFixed(2)
+.replace(".",",")
+}
+</td>
+
+<td>
+
+${
+pagamento.status === "pendente"
+? "🟠 Pendente"
+
+: pagamento.status === "confirmado"
+? "🔵 Confirmado"
+
+: pagamento.status === "finalizado"
+? "🟢 Finalizado"
+
+: pagamento.status || "-"
+
+}
+
+</td>
+
+<td>${pagamento.premio || "-"}</td>
+
+`;
+
+
+if(tabela){
+
+tabela.appendChild(linha);
+
+}
+
+});
   
 });
 
