@@ -574,12 +574,17 @@ ${resultados.length} pagamentos encontrados.
 </p>
 `;
 
-  const tabela =
+const tabela =
 document.getElementById(
 "tabelaBuscaWhatsApp"
 );
 
+
+if(tabela){
+
 tabela.innerHTML = "";
+
+}
   
 });
 
