@@ -565,14 +565,19 @@ document.getElementById(
 "resultadoBuscaWhatsApp"
 );
 
-resultadoBusca.innerHTML = 
-`
-<h3>🔎 Resultado da Busca</h3>
+const contadorBusca =
+document.getElementById(
+"contadorBuscaWhatsApp"
+);
 
-<p>
-${resultados.length} pagamentos encontrados.
-</p>
-`;
+
+if(contadorBusca){
+
+contadorBusca.innerText =
+resultados.length +
+" pagamentos encontrados.";
+
+}
 
 const tabela =
 document.getElementById(
