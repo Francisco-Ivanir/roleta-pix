@@ -573,6 +573,13 @@ resultadoBusca.innerHTML =
 ${resultados.length} pagamentos encontrados.
 </p>
 `;
+
+  const tabela =
+document.getElementById(
+"tabelaBuscaWhatsApp"
+);
+
+tabela.innerHTML = "";
   
 });
 
