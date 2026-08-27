@@ -555,6 +555,15 @@ return b.criadoEm.toMillis() - a.criadoEm.toMillis();
 
 });
 
+  console.log(
+"Busca ordenada:",
+resultados
+);
+
+});
+
+});
+
 document
 .getElementById("btnSalvarConfiguracoes")
 .addEventListener("click", async()=>{
