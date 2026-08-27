@@ -560,6 +560,20 @@ return b.criadoEm.toMillis() - a.criadoEm.toMillis();
 resultados
 );
 
+  const resultadoBusca =
+document.getElementById(
+"resultadoBuscaWhatsApp"
+);
+
+resultadoBusca.innerHTML = 
+`
+<h3>🔎 Resultado da Busca</h3>
+
+<p>
+${resultados.length} pagamentos encontrados.
+</p>
+`;
+  
 });
 
 });
