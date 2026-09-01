@@ -663,6 +663,34 @@ tabela.appendChild(linha);
 });
 
 document
+.getElementById("btnLimparBusca")
+.addEventListener("click",()=>{
+
+  document
+  .getElementById("buscarWhatsApp")
+  .value = "";
+
+  const contadorBusca =
+    document.getElementById(
+      "contadorBuscaWhatsApp"
+    );
+
+  if(contadorBusca){
+    contadorBusca.innerText = "";
+  }
+
+  const tabela =
+    document.getElementById(
+      "tabelaBuscaWhatsApp"
+    );
+
+  if(tabela){
+    tabela.innerHTML = "";
+  }
+
+});
+
+document
 .getElementById("btnSalvarConfiguracoes")
 .addEventListener("click", async()=>{
 
