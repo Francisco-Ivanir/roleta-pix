@@ -647,6 +647,15 @@ pagamento.status === "pendente"
 
 <td>${pagamento.premio || "-"}</td>
 
+<td>
+  <button
+    class="btnVerPagamento"
+    data-id="${pagamento.id}"
+  >
+    👁 Ver
+  </button>
+</td>
+
 `;
 
 
