@@ -579,6 +579,50 @@ resultados.length +
 
 }
 
+  const resumo =
+  document.getElementById(
+    "resumoBuscaWhatsApp"
+  );
+
+if(resumo){
+
+  let totalPago = 0;
+  let quantidade = resultados.length;
+  let premios = [];
+
+  resultados.forEach((pagamento)=>{
+
+    totalPago += Number(
+      pagamento.valor || 0
+    );
+
+    if(pagamento.premio){
+      premios.push(pagamento.premio);
+    }
+
+  });
+
+  resumo.innerHTML = `
+    <p>
+      💰 Total pago:
+      <strong>
+        R$ ${totalPago.toFixed(2).replace(".",",")}
+      </strong>
+    </p>
+
+    <p>
+      📋 Quantidade de pagamentos:
+      <strong>${quantidade}</strong>
+    </p>
+
+    <p>
+      🏆 Prêmios recebidos:
+      <strong>${premios.length}</strong>
+    </p>
+  `;
+
+}
+  
 const tabela =
 document.getElementById(
 "tabelaBuscaWhatsApp"
