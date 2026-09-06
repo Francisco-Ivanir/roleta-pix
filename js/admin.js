@@ -589,7 +589,9 @@ if(resumo){
   let totalPago = 0;
   let quantidade = resultados.length;
   let premios = [];
-
+let finalizados = 0;
+let pendentes = 0;
+  
   resultados.forEach((pagamento)=>{
 
     totalPago += Number(
