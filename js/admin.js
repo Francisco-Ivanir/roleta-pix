@@ -700,6 +700,15 @@ pagamento.status === "pendente"
   </button>
 </td>
 
+<td>
+  <button
+    class="btnWhatsApp"
+    data-whatsapp="${pagamento.whatsappCliente || ""}"
+  >
+    📱 WhatsApp
+  </button>
+</td>
+
 `;
 
 
