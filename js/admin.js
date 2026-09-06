@@ -762,6 +762,32 @@ if(resumo){
 });
 
 document
+.getElementById("tabelaBuscaWhatsApp")
+.addEventListener("click",(e)=>{
+
+  if(!e.target.classList.contains("btnWhatsApp")){
+    return;
+  }
+
+  const numero =
+    e.target.dataset.whatsapp;
+
+  if(!numero){
+    alert("❌ WhatsApp não informado.");
+    return;
+  }
+
+  const numeroLimpo =
+    numero.replace(/\D/g,"");
+
+  window.open(
+    "https://wa.me/55" + numeroLimpo,
+    "_blank"
+  );
+
+});
+
+document
 .getElementById("btnSalvarConfiguracoes")
 .addEventListener("click", async()=>{
 
