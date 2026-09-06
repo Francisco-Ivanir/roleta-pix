@@ -741,6 +741,15 @@ document
     tabela.innerHTML = "";
   }
 
+  const resumo =
+  document.getElementById(
+    "resumoBuscaWhatsApp"
+  );
+
+if(resumo){
+  resumo.innerHTML = "";
+}
+  
 });
 
 document
