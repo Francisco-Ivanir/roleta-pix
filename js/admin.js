@@ -602,6 +602,14 @@ let pendentes = 0;
       premios.push(pagamento.premio);
     }
 
+    if(pagamento.status === "finalizado"){
+  finalizados++;
+}
+
+if(pagamento.status === "pendente"){
+  pendentes++;
+}
+    
   });
 
   resumo.innerHTML = `
