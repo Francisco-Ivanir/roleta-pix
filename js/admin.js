@@ -629,6 +629,17 @@ if(pagamento.status === "pendente"){
       🏆 Prêmios recebidos:
       <strong>${premios.length}</strong>
     </p>
+
+    <p>
+  🟢 Pagamentos finalizados:
+  <strong>${finalizados}</strong>
+</p>
+
+<p>
+  ⏳ Pagamentos pendentes:
+  <strong>${pendentes}</strong>
+</p>
+
   `;
 
 }
