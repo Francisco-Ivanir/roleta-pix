@@ -209,6 +209,8 @@ let pendentes = 0;
 let finalizados = 0;
 
 let arrecadado = 0;
+
+  let confirmado = 0;
   
 const estatisticas = {};
 
@@ -230,7 +232,12 @@ const pagamento = doc.data();
   
 total++;
 
-
+if(pagamento.status === "confirmado"){
+  confirmado += Number(
+    pagamento.valor || 0
+  );
+}
+  
 if(pagamento.status === "pendente"){
 
 pendentes++;
