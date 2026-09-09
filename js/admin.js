@@ -371,7 +371,24 @@ arrecadado
 const divEstatisticas =
 document.getElementById("estatisticasPremios");
 
-divEstatisticas.innerHTML = "";
+divEstatisticas.innerHTML = `
+
+  <div style="
+    display:grid;
+    grid-template-columns:1fr 120px;
+    gap:10px;
+    padding:8px;
+    font-weight:bold;
+    border-bottom:2px solid #333;
+  ">
+
+    <span>🏆 Prêmio</span>
+
+    <span>🔢 Quantidade</span>
+
+  </div>
+
+`;
 
 for(const premio in estatisticas){
 
