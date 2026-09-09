@@ -376,13 +376,28 @@ divEstatisticas.innerHTML = "";
 for(const premio in estatisticas){
 
 const linha =
-document.createElement("p");
+document.createElement("div");
 
-linha.innerHTML =
-`🏆 ${premio}: <strong>${estatisticas[premio]}</strong>`;
+linha.innerHTML = `
+  <div style="
+    display:grid;
+    grid-template-columns: 1fr 120px;
+    gap:10px;
+    padding:8px;
+    border-bottom:1px solid #ccc;
+  ">
+
+    <strong>🏆 ${premio}</strong>
+
+    <span>
+      🔢 ${estatisticas[premio]}
+    </span>
+
+  </div>
+`;
 
 divEstatisticas.appendChild(linha);
-
+  
 }
 },
 
