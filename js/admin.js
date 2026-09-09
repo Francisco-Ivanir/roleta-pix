@@ -406,9 +406,9 @@ linha.innerHTML = `
 
     <strong>🏆 ${premio}</strong>
 
-    <span>
-      🔢 ${estatisticas[premio]}
-    </span>
+   <span style="text-align:right;">
+  🔢 ${estatisticas[premio]}
+</span>
 
   </div>
 `;
