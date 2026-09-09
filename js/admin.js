@@ -375,7 +375,7 @@ divEstatisticas.innerHTML = `
 
   <div style="
     display:grid;
-    grid-template-columns:1fr 120px;
+   grid-template-columns: minmax(150px, 1fr) 150px;
     gap:10px;
     padding:8px;
     font-weight:bold;
