@@ -396,13 +396,14 @@ const linha =
 document.createElement("div");
 
 linha.innerHTML = `
-  <div style="
+ <div style="
     display:grid;
-    grid-template-columns: 1fr 120px;
+    grid-template-columns: minmax(150px, 1fr) 150px;
     gap:10px;
     padding:8px;
     border-bottom:1px solid #ccc;
-  ">
+    align-items:center;
+">
 
     <strong>🏆 ${premio}</strong>
 
