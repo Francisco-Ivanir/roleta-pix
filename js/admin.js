@@ -371,51 +371,18 @@ arrecadado
 const divEstatisticas =
 document.getElementById("estatisticasPremios");
 
-divEstatisticas.innerHTML = `
-
-  <div style="
-    display:grid;
-   grid-template-columns: minmax(150px, 1fr) 150px;
-    gap:10px;
-    padding:8px;
-    font-weight:bold;
-    border-bottom:2px solid #333;
-  ">
-
-    <span>🏆 Prêmio</span>
-
-    <span>🔢 Quantidade</span>
-
-  </div>
-
-`;
+divEstatisticas.innerHTML = "";
 
 for(const premio in estatisticas){
 
-const linha =
-document.createElement("div");
+  const linha =
+    document.createElement("p");
 
-linha.innerHTML = `
- <div style="
-    display:grid;
-    grid-template-columns: minmax(150px, 1fr) 150px;
-    gap:10px;
-    padding:8px;
-    border-bottom:1px solid #ccc;
-    align-items:center;
-">
+  linha.innerHTML =
+    `🏆 ${premio}: <strong>${estatisticas[premio]}</strong>`;
 
-    <strong>🏆 ${premio}</strong>
+  divEstatisticas.appendChild(linha);
 
-   <span style="text-align:right;">
-  🔢 ${estatisticas[premio]}
-</span>
-
-  </div>
-`;
-
-divEstatisticas.appendChild(linha);
-  
 }
 },
 
