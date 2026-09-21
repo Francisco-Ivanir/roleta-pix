@@ -375,6 +375,14 @@ arrecadado
 .toFixed(2)
 .replace(".",",");
 
+  document
+.getElementById("confirmado")
+.innerText =
+"R$ " +
+confirmado
+.toFixed(2)
+.replace(".",",");
+  
 const divEstatisticas =
 document.getElementById("estatisticasPremios");
 
