@@ -211,6 +211,8 @@ let finalizados = 0;
 let arrecadado = 0;
 
   let confirmado = 0;
+
+  let valorPendente = 0;
   
 const estatisticas = {};
 
