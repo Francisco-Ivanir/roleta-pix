@@ -388,6 +388,14 @@ arrecadado
 confirmado
 .toFixed(2)
 .replace(".",",");
+
+  document
+.getElementById("valorPendente")
+.innerText =
+"R$ " +
+valorPendente
+.toFixed(2)
+.replace(".",",");
   
 const divEstatisticas =
 document.getElementById("estatisticasPremios");
