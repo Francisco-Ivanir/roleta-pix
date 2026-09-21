@@ -244,6 +244,10 @@ if(pagamento.status === "pendente"){
 
 pendentes++;
 
+  valorPendente += Number(
+  pagamento.valor || 0
+);
+  
 const linhaPendente =
 document.createElement("tr");
 
