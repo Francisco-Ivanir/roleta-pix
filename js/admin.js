@@ -1499,3 +1499,15 @@ dados.length +
   });
 
 }
+
+document
+.getElementById("filtroPeriodo")
+.addEventListener("change",(e)=>{
+
+  console.log(
+    "Período selecionado:",
+    e.target.value
+  );
+
+});
+
