@@ -189,6 +189,9 @@ erro
   
  function carregarPainel(){
 
+   const filtroPeriodo =
+document.getElementById("filtroPeriodo").value;
+   
 onSnapshot(
 
 query(
