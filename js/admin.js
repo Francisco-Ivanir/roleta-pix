@@ -191,6 +191,38 @@ erro
 
    const filtroPeriodo =
 document.getElementById("filtroPeriodo").value;
+
+   let dataInicial = null;
+
+if(filtroPeriodo === "hoje"){
+
+  dataInicial = new Date();
+
+  dataInicial.setHours(
+    0,0,0,0
+  );
+
+}
+
+if(filtroPeriodo === "7dias"){
+
+  dataInicial = new Date();
+
+  dataInicial.setDate(
+    dataInicial.getDate() - 7
+  );
+
+}
+
+if(filtroPeriodo === "30dias"){
+
+  dataInicial = new Date();
+
+  dataInicial.setDate(
+    dataInicial.getDate() - 30
+  );
+
+}
    
 onSnapshot(
 
