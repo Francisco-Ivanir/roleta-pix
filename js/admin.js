@@ -1545,9 +1545,11 @@ document
     periodo
   );
 
-  console.log(
-    "Data inicial:",
-    dataInicial
-  );
+ console.log(
+  "Data inicial:",
+  dataInicial
+    ? dataInicial.toLocaleString("pt-BR")
+    : "Todo o período"
+);
 
 });
