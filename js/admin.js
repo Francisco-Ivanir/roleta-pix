@@ -266,7 +266,23 @@ snapshot.forEach((doc)=>{
 
 
 const pagamento = doc.data();
-  
+
+if(
+  dataInicial &&
+  pagamento.criadoEm
+){
+
+  const dataPagamento =
+    pagamento.criadoEm.toDate();
+
+  if(dataPagamento < dataInicial){
+
+    return;
+
+  }
+
+}
+
 total++;
 
 if(pagamento.status === "confirmado"){
