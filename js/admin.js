@@ -70,6 +70,8 @@ document
 
 }
 
+let painelListener = null; 
+
 let historicoDados = [];
 
 let filtroAtualHistorico = "todos";
@@ -186,8 +188,6 @@ erro
 }
 
 }
-
-let painelListener = null; 
 
  function carregarPainel(){
 
