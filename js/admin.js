@@ -225,8 +225,14 @@ if(filtroPeriodo === "30dias"){
   );
 
 }
+
+   if(painelListener){
+
+  painelListener();
+
+}
    
-onSnapshot(
+painelListener = onSnapshot(
 
 query(
 
