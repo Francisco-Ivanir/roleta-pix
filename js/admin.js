@@ -186,7 +186,9 @@ erro
 }
 
 }
-  
+
+let painelListener = null; 
+
  function carregarPainel(){
 
    const filtroPeriodo =
