@@ -1563,52 +1563,11 @@ document
 .getElementById("filtroPeriodo")
 .addEventListener("change",(e)=>{
 
-  const periodo = e.target.value;
-
-  const agora = new Date();
-
-  let dataInicial = null;
-
-  if(periodo === "hoje"){
-
-    dataInicial = new Date();
-
-    dataInicial.setHours(
-      0,0,0,0
-    );
-
-  }
-
-  if(periodo === "7dias"){
-
-    dataInicial = new Date();
-
-    dataInicial.setDate(
-      dataInicial.getDate() - 7
-    );
-
-  }
-
-  if(periodo === "30dias"){
-
-    dataInicial = new Date();
-
-    dataInicial.setDate(
-      dataInicial.getDate() - 30
-    );
-
-  }
-
   console.log(
-    "Período:",
-    periodo
+    "Alterando período:",
+    e.target.value
   );
 
- console.log(
-  "Data inicial:",
-  dataInicial
-    ? dataInicial.toLocaleString("pt-BR")
-    : "Todo o período"
-);
+  carregarPainel();
 
 });
