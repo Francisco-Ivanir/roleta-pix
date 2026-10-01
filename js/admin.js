@@ -214,6 +214,10 @@ if(filtroPeriodo === "7dias"){
     dataInicial.getDate() - 7
   );
 
+  dataInicial.setHours(
+    0,0,0,0
+  );
+
 }
 
 if(filtroPeriodo === "30dias"){
@@ -222,6 +226,8 @@ if(filtroPeriodo === "30dias"){
 
   dataInicial.setDate(
     dataInicial.getDate() - 30
+     dataInicial.setHours(
+    0,0,0,0
   );
 
 }
