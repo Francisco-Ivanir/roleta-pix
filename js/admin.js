@@ -1573,21 +1573,30 @@ document
 
   const periodoTexto = {
 
-    todos: "📅 Todo o período",
+    todos: "Todo o período",
 
-    hoje: "📅 Hoje",
+    hoje: "Hoje",
 
-    7dias: "📅 Últimos 7 dias",
+    7dias: "Últimos 7 dias",
 
-    30dias: "📅 Últimos 30 dias"
+    30dias: "Últimos 30 dias"
 
   };
 
 
-  document
-  .getElementById("periodoSelecionado")
-  .innerText =
-  periodoTexto[e.target.value];
+  const campo =
+  document.getElementById(
+    "periodoSelecionado"
+  );
+
+
+  if(campo){
+
+    campo.innerText =
+    "📅 " +
+    periodoTexto[e.target.value];
+
+  }
 
 
   carregarPainel();
