@@ -1579,9 +1579,22 @@ document
 
   if(campo){
 
-    campo.innerText =
-    "Período selecionado: " +
-    e.target.value;
+   const nomesPeriodo = {
+
+  todos: "Todo o período",
+
+  hoje: "Hoje",
+
+  7dias: "Últimos 7 dias",
+
+  30dias: "Últimos 30 dias"
+
+};
+
+
+campo.innerText =
+"📅 Período selecionado: " +
+nomesPeriodo[e.target.value];
 
   }
 
