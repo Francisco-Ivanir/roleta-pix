@@ -1569,11 +1569,28 @@ dados.length +
 
 document
 .getElementById("filtroPeriodo")
-.addEventListener("change",()=>{
+.addEventListener("change",(e)=>{
+
+  const campo =
+  document.getElementById(
+    "periodoSelecionado"
+  );
+
+
+  if(campo){
+
+    campo.innerText =
+    "Período selecionado: " +
+    e.target.value;
+
+  }
+
 
   console.log(
-    "Filtro alterado"
+    "Filtro alterado:",
+    e.target.value
   );
+
 
   carregarPainel();
 
