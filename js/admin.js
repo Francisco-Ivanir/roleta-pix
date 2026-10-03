@@ -1569,40 +1569,34 @@ dados.length +
 
 document
 .getElementById("filtroPeriodo")
-.addEventListener("change",(e)=>{
+.addEventListener("change", (e) => {
 
-  const campo =
-  document.getElementById(
+  const campo = document.getElementById(
     "periodoSelecionado"
   );
 
+  const periodo = e.target.value;
 
-  if(campo){
+  let nomePeriodo = "Todo o periodo";
 
-  const nomesPeriodo = {
-
-  todos: "Todo o período",
-
-  hoje: "Hoje",
-
-  7dias: "Últimos 7 dias",
-
-  30dias: "Últimos 30 dias"
-
-};
-
-
-campo.innerText =
-"📅 Período selecionado: " +
-nomesPeriodo[e.target.value];
+  if (periodo === "hoje") {
+    nomePeriodo = "Hoje";
   }
 
+  if (periodo === "7dias") {
+    nomePeriodo = "Ultimos 7 dias";
+  }
 
-  console.log(
-    "Filtro alterado:",
-    e.target.value
-  );
+  if (periodo === "30dias") {
+    nomePeriodo = "Ultimos 30 dias";
+  }
 
+  if (campo) {
+    campo.innerText =
+      "Periodo selecionado: " + nomePeriodo;
+  }
+
+  console.log("Filtro alterado:", periodo);
 
   carregarPainel();
 
