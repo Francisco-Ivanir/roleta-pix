@@ -1579,7 +1579,7 @@ document
 
   if(campo){
 
-   const nomesPeriodo = {
+  const nomesPeriodo = {
 
   todos: "Todo o período",
 
@@ -1595,7 +1595,6 @@ document
 campo.innerText =
 "📅 Período selecionado: " +
 nomesPeriodo[e.target.value];
-
   }
 
 
