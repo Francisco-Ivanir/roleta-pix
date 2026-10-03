@@ -1569,35 +1569,11 @@ dados.length +
 
 document
 .getElementById("filtroPeriodo")
-.addEventListener("change",(e)=>{
+.addEventListener("change",()=>{
 
-  const periodoTexto = {
-
-    todos: "Todo o período",
-
-    hoje: "Hoje",
-
-    7dias: "Últimos 7 dias",
-
-    30dias: "Últimos 30 dias"
-
-  };
-
-
-  const campo =
-  document.getElementById(
-    "periodoSelecionado"
+  console.log(
+    "Filtro alterado"
   );
-
-
-  if(campo){
-
-    campo.innerText =
-    "📅 " +
-    periodoTexto[e.target.value];
-
-  }
-
 
   carregarPainel();
 
