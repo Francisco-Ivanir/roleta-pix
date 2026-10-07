@@ -519,6 +519,19 @@ if(resumoConfirmado){
   .replace(".",",");
 
 }
+
+  const resumoFinalizados =
+document.getElementById(
+  "resumoPeriodoFinalizados"
+);
+
+if(resumoFinalizados){
+
+  resumoFinalizados.innerText =
+  "Finalizados: " +
+  finalizados;
+
+}
   
 const divEstatisticas =
 document.getElementById("estatisticasPremios");
