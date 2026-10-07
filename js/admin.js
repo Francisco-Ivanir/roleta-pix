@@ -476,6 +476,19 @@ if(resumoNome){
   filtroPeriodo;
 
 }
+
+  const resumoGiros =
+document.getElementById(
+  "resumoPeriodoGiros"
+);
+
+if(resumoGiros){
+
+  resumoGiros.innerText =
+  "Giros: " +
+  total;
+
+}
   
 const divEstatisticas =
 document.getElementById("estatisticasPremios");
