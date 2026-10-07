@@ -489,6 +489,21 @@ if(resumoGiros){
   total;
 
 }
+
+  const resumoPendente =
+document.getElementById(
+  "resumoPeriodoPendente"
+);
+
+if(resumoPendente){
+
+  resumoPendente.innerText =
+  "Valor Pendente: R$ " +
+  valorPendente
+  .toFixed(2)
+  .replace(".",",");
+
+} 
   
 const divEstatisticas =
 document.getElementById("estatisticasPremios");
