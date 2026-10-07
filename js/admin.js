@@ -504,6 +504,21 @@ if(resumoPendente){
   .replace(".",",");
 
 } 
+
+  const resumoConfirmado =
+document.getElementById(
+  "resumoPeriodoConfirmado"
+);
+
+if(resumoConfirmado){
+
+  resumoConfirmado.innerText =
+  "Confirmado: R$ " +
+  confirmado
+  .toFixed(2)
+  .replace(".",",");
+
+}
   
 const divEstatisticas =
 document.getElementById("estatisticasPremios");
