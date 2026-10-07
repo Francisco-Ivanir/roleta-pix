@@ -464,7 +464,18 @@ valorPendente
 .toFixed(2)
 .replace(".",",");
 
- 
+ const resumoNome =
+document.getElementById(
+  "resumoPeriodoNome"
+);
+
+if(resumoNome){
+
+  resumoNome.innerText =
+  "Periodo: " +
+  filtroPeriodo;
+
+}
   
 const divEstatisticas =
 document.getElementById("estatisticasPremios");
