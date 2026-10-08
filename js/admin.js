@@ -532,6 +532,21 @@ if(resumoFinalizados){
   finalizados;
 
 }
+
+  const resumoArrecadado =
+document.getElementById(
+  "resumoPeriodoArrecadado"
+);
+
+if(resumoArrecadado){
+
+  resumoArrecadado.innerText =
+  "Arrecadado: R$ " +
+  arrecadado
+  .toFixed(2)
+  .replace(".",",");
+
+}
   
 const divEstatisticas =
 document.getElementById("estatisticasPremios");
