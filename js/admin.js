@@ -464,18 +464,56 @@ valorPendente
 .toFixed(2)
 .replace(".",",");
 
- const resumoNome =
+
+const resumoNome =
 document.getElementById(
   "resumoPeriodoNome"
 );
 
 if(resumoNome){
 
+  let nomePeriodo = "Todo o periodo";
+
+  if(filtroPeriodo === "hoje"){
+
+    nomePeriodo =
+    "Hoje - " +
+    new Date().toLocaleDateString("pt-BR");
+
+  }
+
+  if(
+    filtroPeriodo === "7dias" ||
+    filtroPeriodo === "30dias"
+  ){
+
+    const dataFinal = new Date();
+
+    const dataInicialResumo = new Date();
+
+    const dias =
+    filtroPeriodo === "7dias" ? 7 : 30;
+
+    dataInicialResumo.setDate(
+      dataInicialResumo.getDate() - dias
+    );
+
+    nomePeriodo =
+    (filtroPeriodo === "7dias"
+      ? "Ultimos 7 dias: "
+      : "Ultimos 30 dias: "
+    ) +
+    dataInicialResumo.toLocaleDateString("pt-BR") +
+    " a " +
+    dataFinal.toLocaleDateString("pt-BR");
+
+  }
+
   resumoNome.innerText =
-  "Periodo: " +
-  filtroPeriodo;
+  "Periodo: " + nomePeriodo;
 
 }
+
 
   const resumoGiros =
 document.getElementById(
