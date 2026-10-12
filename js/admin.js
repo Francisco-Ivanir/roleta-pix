@@ -621,6 +621,25 @@ if(resumoTicket){
   .replace(".",",");
 
 }
+
+  const resumoConversao =
+document.getElementById(
+  "resumoPeriodoConversao"
+);
+
+if(resumoConversao){
+
+  const conversao =
+  total > 0
+    ? (finalizados / total) * 100
+    : 0;
+
+  resumoConversao.innerText =
+  "Conversao: " +
+  conversao.toFixed(1).replace(".",",") +
+  "%";
+
+}
   
   const resumoArrecadado =
 document.getElementById(
