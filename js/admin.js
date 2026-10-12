@@ -601,6 +601,26 @@ if(resumoPercentual){
   "%";
 
 }
+
+  const resumoTicket =
+document.getElementById(
+  "resumoPeriodoTicketMedio"
+);
+
+if(resumoTicket){
+
+  const ticketMedio =
+  finalizados > 0
+    ? arrecadado / finalizados
+    : 0;
+
+  resumoTicket.innerText =
+  "Ticket médio: R$ " +
+  ticketMedio
+  .toFixed(2)
+  .replace(".",",");
+
+}
   
   const resumoArrecadado =
 document.getElementById(
