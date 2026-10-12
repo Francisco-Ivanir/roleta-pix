@@ -429,7 +429,19 @@ document
 .getElementById("totalGiros")
 .innerText = total;
 
+const resumoPendentes =
+document.getElementById(
+  "resumoPeriodoPendentes"
+);
 
+if(resumoPendentes){
+
+  resumoPendentes.innerText =
+  "Pagamentos pendentes: " +
+  pendentes;
+
+}
+  
 document
 .getElementById("pendentes")
 .innerText = pendentes;
