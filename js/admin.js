@@ -583,6 +583,25 @@ if(resumoFinalizados){
 
 }
 
+  const resumoPercentual =
+document.getElementById(
+  "resumoPeriodoPercentual"
+);
+
+if(resumoPercentual){
+
+  const percentual =
+  total > 0
+    ? (finalizados / total) * 100
+    : 0;
+
+  resumoPercentual.innerText =
+  "Percentual finalizado: " +
+  percentual.toFixed(1).replace(".",",") +
+  "%";
+
+}
+  
   const resumoArrecadado =
 document.getElementById(
   "resumoPeriodoArrecadado"
