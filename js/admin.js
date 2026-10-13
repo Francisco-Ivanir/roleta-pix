@@ -640,6 +640,26 @@ if(resumoConversao){
   "%";
 
 }
+
+  const resumoValorMedio =
+document.getElementById(
+  "resumoPeriodoValorMedioGiro"
+);
+
+if(resumoValorMedio){
+
+  const valorMedio =
+  total > 0
+    ? arrecadado / total
+    : 0;
+
+  resumoValorMedio.innerText =
+  "Valor medio por giro: R$ " +
+  valorMedio
+  .toFixed(2)
+  .replace(".",",");
+
+}
   
   const resumoArrecadado =
 document.getElementById(
