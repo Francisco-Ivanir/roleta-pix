@@ -660,6 +660,46 @@ if(resumoValorMedio){
   .replace(".",",");
 
 }
+
+  const resumoSaude =
+document.getElementById(
+  "resumoPeriodoSaude"
+);
+
+if(resumoSaude){
+
+  let mensagemSaude =
+  "Aguardando dados";
+
+  if(total > 0){
+
+    const percentualFinalizado =
+    (finalizados / total) * 100;
+
+    if(percentualFinalizado >= 70){
+
+      mensagemSaude =
+      "Bom desempenho";
+
+    } else if(percentualFinalizado >= 40){
+
+      mensagemSaude =
+      "Atencao";
+
+    } else {
+
+      mensagemSaude =
+      "Baixa finalizacao";
+
+    }
+
+  }
+
+  resumoSaude.innerText =
+  "Saude do periodo: " +
+  mensagemSaude;
+
+}
   
   const resumoArrecadado =
 document.getElementById(
